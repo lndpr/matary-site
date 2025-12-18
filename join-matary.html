@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Komunitas MATARY</title>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7NFM4RGX1J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7NFM4RGX1J');
+</script>
+
+  <!-- GLOBAL NAVBAR -->
+  <link rel="stylesheet" href="assets/main.css">
+
+  <style>
+    /* ===== DARK THEME (SAMA SEPERTI EA) ===== */
+
+    .join-hero{
+      padding:140px 20px 100px;
+      text-align:center;
+    }
+
+    .join-hero h1{
+      font-size:2.6rem;
+      background:linear-gradient(90deg,#60a5fa,#22c55e);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      margin-bottom:16px;
+    }
+
+    .join-hero p{
+      color:#94a3b8;
+      max-width:700px;
+      margin:auto;
+    }
+
+    .join-section{
+      padding:100px 20px;
+    }
+
+    .join-container{
+      max-width:1100px;
+      margin:auto;
+    }
+
+    .join-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .join-card{
+      background:linear-gradient(180deg,#020617,#020617);
+      border:1px solid #020617;
+      border-radius:20px;
+      padding:32px;
+      box-shadow:0 30px 60px rgba(0,0,0,.45);
+    }
+
+    .join-card h3{
+      margin-bottom:16px;
+      font-size:1.3rem;
+    }
+
+    .join-card ul{
+      list-style:none;
+      padding:0;
+      color:#cbd5f5;
+    }
+
+    .join-card li{
+      margin-bottom:10px;
+    }
+
+    .step{
+      background:linear-gradient(180deg,#020617,#020617);
+      border-radius:20px;
+      padding:30px;
+      margin-bottom:24px;
+      box-shadow:0 30px 60px rgba(0,0,0,.45);
+    }
+
+    .step strong{
+      color:#60a5fa;
+    }
+
+    .join-cta{
+      text-align:center;
+      padding-bottom:140px;
+    }
+
+    .join-btn{
+      display:inline-block;
+      margin-top:30px;
+      padding:16px 40px;
+      border-radius:999px;
+      background:linear-gradient(90deg,#22c55e,#16a34a);
+      color:#052e16;
+      font-weight:600;
+      text-decoration:none;
+      box-shadow:0 20px 40px rgba(34,197,94,.35);
+    }
+
+
+    /* ===== LOGO ===== */
+    .logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.logo img{
+  height:36px;       /* atur tinggi logo */
+  width:auto;
+  display:block;
+}
+
+
+    /* ===== HIGHLIGHT JOIN SECTION ===== */
+.join-highlight{
+  margin-top:80px;
+  padding:60px;
+  border-radius:36px;
+  background:
+    radial-gradient(circle at top,
+      rgba(34,197,94,.12),
+      rgba(2,6,23,.95)
+    );
+  border:1px solid rgba(34,197,94,.35);
+  box-shadow:
+    0 40px 120px rgba(0,0,0,.9),
+    inset 0 0 80px rgba(34,197,94,.12);
+}
+
+.join-highlight .join-card{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(2,6,23,.85),
+      rgba(2,6,23,.98)
+    );
+  border-radius:24px;
+  padding:36px;
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.7);
+  transition:.3s ease;
+}
+
+.join-highlight .join-card:hover{
+  transform:translateY(-6px);
+  box-shadow:
+    0 40px 120px rgba(0,0,0,.9),
+    0 0 40px rgba(34,197,94,.25);
+}
+
+/* LEFT (NEGATIVE) */
+.join-card.bad{
+  border:1px solid rgba(239,68,68,.45);
+}
+.join-card.bad h3{
+  color:#ef4444;
+}
+
+/* RIGHT (POSITIVE) */
+.join-card.good{
+  border:1px solid rgba(34,197,94,.55);
+}
+.join-card.good h3{
+  color:#22c55e;
+}
+
+/* CHECKLIST */
+.join-card ul li{
+  margin-bottom:12px;
+  font-size:1rem;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .join-highlight{
+    padding:32px 20px;
+  }
+}
+
+/* ===== HIGHLIGHT JOIN STEPS ===== */
+.join-steps{
+  margin-top:80px;
+  padding:60px;
+  border-radius:36px;
+  background:
+    radial-gradient(circle at top,
+      rgba(59,130,246,.18),
+      rgba(2,6,23,.96)
+    );
+  border:1px solid rgba(59,130,246,.35);
+  box-shadow:
+    0 40px 120px rgba(0,0,0,.9),
+    inset 0 0 80px rgba(59,130,246,.15);
+}
+
+.step{
+  display:flex;
+  gap:24px;
+  align-items:flex-start;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(2,6,23,.85),
+      rgba(2,6,23,.98)
+    );
+  padding:28px 32px;
+  border-radius:22px;
+  margin-bottom:26px;
+  border:1px solid rgba(148,163,184,.25);
+  box-shadow:0 25px 80px rgba(0,0,0,.65);
+  transition:.3s ease;
+}
+
+.step:hover{
+  transform:translateY(-4px);
+  box-shadow:
+    0 40px 120px rgba(0,0,0,.9),
+    0 0 40px rgba(59,130,246,.25);
+}
+
+.step-number{
+  min-width:46px;
+  height:46px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#3b82f6,#22c55e);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  color:#020617;
+  box-shadow:0 0 20px rgba(59,130,246,.7);
+}
+
+.step-content h4{
+  margin-bottom:6px;
+  font-size:1.1rem;
+  color:#e5e7eb;
+}
+
+.step-content p{
+  color:#cbd5f5;
+  margin:0;
+}
+
+.step-content a{
+  color:#60a5fa;
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .join-steps{
+    padding:32px 20px;
+  }
+  .step{
+    flex-direction:column;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+  <img src="assets/img/logo-matary.png" alt="MATARY Logo">
+</div>
+    <ul class="nav-menu">
+      <li><a href="index.html">EA MATARY</a></li>
+      <li><a href="join-matary.html" class="active">Join MATARY</a></li>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="join-hero">
+  <h1>Join Komunitas MATARY</h1>
+  <p>
+    Akses group diskusi trading, edukasi, dan tools pendukung  
+    untuk trader yang ingin belajar & berkembang bersama.
+  </p>
+</section>
+
+<!-- BENEFIT -->
+<section class="join-section">
+  <div class="join-container join-highlight">
+
+    <div class="join-grid">
+
+      <div class="join-card bad">
+        <h3>❌ GAK PAKE BAYAR-BAYAR!</h3>
+        <ul>
+          <li>✖ Bayar</li>
+          <li>✖ Minimal deposit</li>
+          <li>✖ Langganan</li>
+        </ul>
+      </div>
+
+      <div class="join-card good">
+        <h3>✅ Semua Gratis!</h3>
+        <ul>
+          <li>✔ Gratis join komunitas</li>
+          <li>✔ Tidak ada minimum deposit</li>
+          <li>✔ Bebas keluar masuk</li>
+          <li>✔ Cocok pemula & trader lama</li>
+          <li>✔ Full akses diskusi</li>
+          <li>✔ Gratis EA </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- HOW TO JOIN -->
+<section class="join-section">
+  <div class="join-container join-steps">
+
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h4>Daftar Broker</h4>
+        <p>
+  Daftar EXNESS:
+  <a href="https://one.exnessonelink.com/boarding/sign-up/a/d8f5pvzdnm?lng=id"
+     target="_blank"
+     onclick="gtag('event', 'click_register_broker', {
+       event_category: 'Broker',
+       event_label: 'EXNESS'
+     });">
+     Klik di sini
+  </a>
+</p>
+
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h4>Tanpa Minimal Deposit</h4>
+        <p>Deposit berapapun, tidak ada batas minimal.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <h4>Kirim No Akun & SS Balance</h4>
+        <p>No akun: 123456<br>SS Balance: Screenshot</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">4</div>
+      <div class="step-content">
+        <h4>Kirim ke Telegram</h4>
+        <p>Kirim ke <a href="https://t.me/mataryclub" target="_blank">@mataryclub</a></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="join-cta">
+  <h2>Siap Join Komunitas MATARY?</h2>
+  <p>Belajar, diskusi, dan berkembang bersama trader lainnya.</p>
+  <a href="https://t.me/mataryclub"
+   target="_blank"
+   class="join-btn"
+   onclick="gtag('event', 'click_join_matary', {
+     event_category: 'Join',
+     event_label: 'Join via Telegram'
+   });">
+  Join via Telegram
+</a>
+
+</section>
+
+</body>
+</html>

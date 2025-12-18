@@ -1,122 +1,885 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <link rel="icon" type="image/png" href="images/favicon.png">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Join Komunitas Trader</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expert Advisor Forex | Disiplin & Risk Control</title>
+  <meta name="description" content="Expert Advisor Forex untuk membantu eksekusi trading lebih disiplin dengan pengaturan risiko yang dapat disesuaikan." />
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7NFM4RGX1J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7NFM4RGX1J');
+</script>
+
+  <style>
+    :root {
+      --accent: #22c55e;
+      --bg: #020617;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --blue: #60a5fa;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #020617, #000000);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+
+    /* ===== LOGO ===== */
+    .logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.logo img{
+  height:36px;       /* atur tinggi logo */
+  width:auto;
+  display:block;
+}
+
+
+
+    /* ===== BACKGROUND CHART GRID ===== */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:
+        repeating-linear-gradient(
+          to right,
+          rgba(148,163,184,.05) 0px,
+          rgba(148,163,184,.05) 1px,
+          transparent 1px,
+          transparent 90px
+        ),
+        repeating-linear-gradient(
+          to top,
+          rgba(148,163,184,.04) 0px,
+          rgba(148,163,184,.04) 1px,
+          transparent 1px,
+          transparent 90px
+        );
+      z-index:-1;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar{
+      position:sticky;
+      top:0;
+      z-index:999;
+      background:rgba(2,6,23,.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid #020617;
+    }
+    .nav-container{
+      max-width:1200px;
+      margin:auto;
+      padding:14px 20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .logo{
+      font-weight:700;
+      letter-spacing:1px;
+      color:#e5e7eb;
+    }
+    .nav-menu{
+      list-style:none;
+      display:flex;
+      gap:24px;
+    }
+    .nav-menu a{
+      color:var(--muted);
+      text-decoration:none;
+      font-weight:500;
+    }
+    .nav-menu a:hover,
+    .nav-menu a.active{
+      color:var(--accent);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      text-align: center;
+      padding: 120px 20px 100px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, var(--blue), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .hero ul {
+      list-style: none;
+      margin: 40px 0;
+    }
+
+    .hero li {
+      margin: 10px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #22c55e, #16a34a);
+      color: #052e16;
+      padding: 16px 36px;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 20px 40px rgba(34,197,94,0.3);
+    }
+
+    section {
+      margin-bottom: 120px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      color: var(--muted);
+      max-width: 800px;
+    }
+
+    /* ===== PROBLEM SECTION (DITONJOLKAN) ===== */
+    .problem-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:32px;
+      margin-top:50px;
+    }
+
+    .problem-card{
+      position:relative;
+      padding:34px;
+      border-radius:22px;
+      background:radial-gradient(
+        circle at top left,
+        rgba(96,165,250,.18),
+        rgba(2,6,23,.96)
+      );
+      border:1px solid rgba(96,165,250,.35);
+      box-shadow:
+        0 35px 90px rgba(0,0,0,.85),
+        inset 0 0 45px rgba(96,165,250,.1);
+      transition:.3s ease;
+    }
+
+    .problem-card::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      border-radius:inherit;
+      background:
+        repeating-linear-gradient(
+          to right,
+          rgba(148,163,184,.06),
+          rgba(148,163,184,.06) 1px,
+          transparent 1px,
+          transparent 80px
+        );
+      pointer-events:none;
+    }
+
+    .problem-card:hover{
+      transform:translateY(-8px);
+      box-shadow:
+        0 45px 120px rgba(0,0,0,.95),
+        inset 0 0 60px rgba(212, 25, 25, 0.897);
+    }
+
+    .problem-card h4{
+      font-size:1.15rem;
+      font-weight:600;
+    }
+
+    /* ===== FEATURE SECTION (HIGHLIGHT) ===== */
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:32px;
+  margin-top:50px;
+}
+
+.feature-card{
+  position:relative;
+  padding:36px;
+  border-radius:22px;
+  background:radial-gradient(
+    circle at top left,
+    rgba(34,197,94,.18),
+    rgba(2,6,23,.96)
+  );
+  border:1px solid rgba(34,197,94,.35);
+  box-shadow:
+    0 35px 90px rgba(0,0,0,.85),
+    inset 0 0 45px rgba(34,197,94,.12);
+  transition:.3s ease;
+}
+
+.feature-card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:
+    repeating-linear-gradient(
+      to right,
+      rgba(148,163,184,.05),
+      rgba(148,163,184,.05) 1px,
+      transparent 1px,
+      transparent 90px
+    );
+  pointer-events:none;
+}
+
+.feature-card:hover{
+  transform:translateY(-8px);
+  box-shadow:
+    0 45px 120px rgba(0,0,0,.95),
+    inset 0 0 70px rgba(96,165,250,.18);
+}
+
+.feature-card h3{
+  font-size:1.25rem;
+  margin-bottom:12px;
+  color:#22c55e;
+}
+
+.feature-card p{
+  color:#cbd5f5;
+  line-height:1.6;
+}
+
+    /* ===== GRID CARD UMUM ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background:#020617;
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 30px 60px rgba(0,0,0,.4);
+    }
+
+    footer {
+      border-top: 1px solid #020617;
+      padding: 40px 20px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    
+    /* ===== EA GUIDE SECTION ===== */
+.ea-guide{
+  margin-top:120px;
+  padding:60px;
+  border-radius:26px;
+  background:radial-gradient(
+    circle at top left,
+    rgba(34,197,94,.12),
+    rgba(2,6,23,.96)
+  );
+  border:1px solid rgba(34,197,94,.35);
+  box-shadow:
+    0 40px 120px rgba(0,0,0,.85),
+    inset 0 0 60px rgba(34,197,94,.1);
+}
+
+.ea-guide h2{
+  font-size:2rem;
+  margin-bottom:20px;
+  background:linear-gradient(90deg,#22c55e,#60a5fa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.ea-guide p{
+  color:#cbd5f5;
+  max-width:900px;
+  line-height:1.8;
+  margin-bottom:20px;
+}
+
+.ea-guide ul{
+  list-style:none;
+  margin-top:20px;
+  padding:0;
+}
+
+.ea-guide li{
+  margin-bottom:10px;
+  color:#e5e7eb;
+}
+
+.ea-badge{
+  display:inline-block;
+  margin-top:24px;
+  padding:8px 16px;
+  border-radius:999px;
+  font-size:.85rem;
+  background:rgba(34,197,94,.15);
+  color:#22c55e;
+  border:1px solid rgba(34,197,94,.35);
+}
+
+/* ===== BACKTEST SECTION ===== */
+.backtest-section{
+  margin-top:140px;
+}
+
+.backtest-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:36px;
+  margin-top:50px;
+}
+
+.backtest-card{
+  position:relative;
+  padding:36px;
+  border-radius:24px;
+  background:radial-gradient(
+    circle at top left,
+    rgba(96,165,250,.18),
+    rgba(2,6,23,.96)
+  );
+  border:1px solid rgba(96,165,250,.35);
+  box-shadow:
+    0 40px 110px rgba(0,0,0,.85),
+    inset 0 0 55px rgba(96,165,250,.12);
+}
+
+.backtest-card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:
+    repeating-linear-gradient(
+      to right,
+      rgba(148,163,184,.05),
+      rgba(148,163,184,.05) 1px,
+      transparent 1px,
+      transparent 80px
+    );
+  pointer-events:none;
+}
+
+.backtest-card h3{
+  font-size:1.3rem;
+  margin-bottom:16px;
+  color:#60a5fa;
+}
+
+.backtest-metric{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:14px;
+  color:#e5e7eb;
+}
+
+.backtest-metric span{
+  color:#94a3b8;
+}
+
+.backtest-note{
+  margin-top:30px;
+  padding:20px;
+  border-radius:16px;
+  background:rgba(2,6,23,.8);
+  border:1px solid rgba(148,163,184,.25);
+  color:#cbd5f5;
+  font-size:.95rem;
+}
+
+.backtest-image{
+  margin-top:16px;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid rgba(96,165,250,.3);
+  box-shadow:0 20px 60px rgba(0,0,0,.6);
+}
+
+.backtest-image img{
+  width:100%;
+  display:block;
+  opacity:.9;
+}
+
+.backtest-image img:hover{
+  opacity:1;
+}
+
+/* ===== BACKTEST IMAGE POPUP ===== */
+.backtest-image{
+  cursor:zoom-in;
+}
+
+.backtest-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(2,6,23,.85);
+  backdrop-filter:blur(6px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:2000;
+}
+
+.backtest-modal.active{
+  display:flex;
+}
+
+.backtest-modal img{
+  max-width:90%;
+  max-height:85vh;
+  border-radius:16px;
+  box-shadow:0 40px 120px rgba(0,0,0,.9);
+  background:#fff;
+}
+
+.backtest-close{
+  position:absolute;
+  top:30px;
+  right:40px;
+  font-size:32px;
+  color:#e5e7eb;
+  cursor:pointer;
+  user-select:none;
+}
+
+/* ===== VIDEO SECTION ===== */
+.video-section{
+  padding:100px 20px;
+  text-align:center;
+}
+
+.video-section h2{
+  font-size:2rem;
+  margin-bottom:12px;
+}
+
+.video-section p{
+  color:#94a3b8;
+  max-width:700px;
+  margin:0 auto 40px;
+}
+
+.video-wrapper{
+  position:relative;
+  max-width:900px;
+  margin:auto;
+  padding-top:56.25%; /* 16:9 */
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 30px 100px rgba(0,0,0,.8);
+  border:1px solid rgba(96,165,250,.35);
+}
+
+.video-wrapper iframe{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+/* ===== collab SECTION ===== */
+
+.ea-collab{
+  margin-top:80px;
+  padding:60px 30px;
+  text-align:center;
+  border-radius:28px;
+  background:linear-gradient(180deg,#020617,#020617);
+  box-shadow:0 40px 80px rgba(0,0,0,.45);
+  border:1px solid rgba(34,197,94,.15);
+}
+
+.ea-collab h3{
+  font-size:1.8rem;
+  margin-bottom:16px;
+  background:linear-gradient(90deg,#60a5fa,#22c55e);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.ea-collab p{
+  max-width:700px;
+  margin:0 auto 30px;
+  color:#94a3b8;
+  line-height:1.8;
+}
+
+.collab-btn{
+  display:inline-block;
+  padding:14px 36px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#22c55e,#16a34a);
+  color:#052e16;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 20px 40px rgba(34,197,94,.35);
+  transition:.2s;
+}
+
+.collab-btn:hover{
+  transform:translateY(-2px);
+}
+
+
+
+  </style>
 </head>
-<body>
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Dapatkan Akses ke Group Diskusi Trading</h1>
-      <p>Sinyal harian, edukasi eksklusif, dan komunitas premium untuk bantu profit konsisten.</p>
-    </div>
-  </header>
 
-  <section class="vip-benefits">
-    <div class="benefits-container">
-      <h2>Join Komunitas MATARY</h2>
-      <div class="benefit-columns">
-        <div class="benefit-card">
-          <h3 class="benefit-label red"> GAK PAKE BAYAR-BAYAR!</h3>
-          <ul class="benefit-list">
-            <li>Bayar ❌</li>
-            <li>Minimal deposit ❌ </li>
-            <li>Langganan ❌</li>
-          </ul>
-        </div>
-        <div class="benefit-card">
-          <h3 class="benefit-label green"> Dapatkan Semua Ini Gratis!</h3>
-          <ul class="benefit-list">
-            <li>Gratisss!!</li>
-            <li>Tidak ada minimum deposit.</li>
-            <li>Bisa keluar masuk sesuka hati.</li>
-            <li>Cocok buat pemula & pro.</li>
-            <li>Full akses semua fitur.</li>
-            <li>Gratis EA untuk Entry one shot.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  
-  
-  <section class="how-to-join">
-    <h2>Cara Join Group Diskusi </h2>
-    <div class="steps">
-      <div class="step">
-        <div class="circle">1</div>
-        <div class="step-text">
-          <h3>Daftar Salah Satu Broker Di Bawah Ini</h3>
-         <p>Daftar akun <strong>EXNESS</strong> melalui link berikut:
-  <a href="https://one.exnessonelink.com/boarding/sign-up/a/d8f5pvzdnm?lng=id" target="_blank">Klik di sini</a>
-</p>
 
-<p>Daftar akun <strong>JustMarkets</strong> melalui link berikut:
-  <a href="https://one.justmarkets.link/a/41pe80jpmm/registration/trader" target="_blank">Klik di sini</a>
-</p>
-
-        </div>
-      </div>
-      <div class="step">
-        <div class="circle">2</div>
-        <div class="step-text">
-          <h3>Tanpa Minimal Deposit</h3>
-          <p>Deposit berapapun, tidak ada batas minimal untuk join VIP.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="circle">3</div>
-        <div class="step-text">
-          <h3>Kirim No Akun & SS Balance</h3>
-          <p>Format:<br><strong>No akun: 123456</strong><br><strong>SS Balance: [lampiran screenshot]</strong></p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="circle">4</div>
-        <div class="step-text">
-          <h3>Kirim ke Telegram</h3>
-          <p>Kirim semua ke <a href="https://t.me/profitsabendino" target="_blank">@profitsabendino</a> via Telegram.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <div class="gallery-container">
-    <div class="gallery">
-      <img src="images/testi1.jpg" alt="Testimoni 1" onclick="openModal(this.src)">
-      <img src="images/testi2.jpg" alt="Testimoni 2" onclick="openModal(this.src)">
-      <!-- Tambahkan gambar lainnya -->
-    </div>
-  </div>
-  
-  <!-- Modal -->
-<div id="modal" class="modal" onclick="closeModal()">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modal-img">
+<div class="backtest-modal" id="backtestModal" onclick="closeBacktestModal()">
+  <span class="backtest-close">&times;</span>
+  <img src="assets/images/backtest-equity.png" alt="Backtest Zoom">
 </div>
 
 <script>
-  function openModal(src) {
-    document.getElementById("modal").style.display = "block";
-    document.getElementById("modal-img").src = src;
+  function openBacktestModal(){
+    document.getElementById("backtestModal").classList.add("active");
   }
 
-  function closeModal() {
-    document.getElementById("modal").style.display = "none";
+  function closeBacktestModal(){
+    document.getElementById("backtestModal").classList.remove("active");
   }
 </script>
 
+<body>
 
-  
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+  <img src="assets/img/logo-matary.png" alt="MATARY Logo">
+</div>
+    <ul class="nav-menu">
+      <li><a href="/ea.html" class="active">EA MATARY</a></li>
+      <li><a href="/join-matary.html">Join MATARY</a></li>
+  </div> 
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Expert Advisor Forex<br>untuk Eksekusi Trading Lebih Disiplin</h1>
+  <p>EA ini dirancang sebagai alat bantu untuk menjalankan strategi trading secara konsisten.</p>
+
+  <ul>
+    <li>✔ Berbasis rule & logic</li>
+    <li>✔ Mengurangi human error</li>
+    <li>✔ Bukan janji profit instan</li>
+  </ul>
+
+  <a href="https://t.me/mataryclub" class="btn">Pelajari Cara Kerjanya</a>
+</div>
+
+<div class="container">
+
+  <!-- PROBLEM -->
+  <section>
+    <h2>Masalah Umum Trader Forex</h2>
+    <p>Banyak trader gagal bukan karena sistemnya buruk, tetapi karena kurang disiplin.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card"><h4> ENTRY TIDAK KONSISTEN</h4></div>
+      <div class="problem-card"><h4> EMOSI SAAT TRADING</h4></div>
+      <div class="problem-card"><h4> TIDAK DISIPLIN TRADING PLAN</h4></div>
+    </div>
+  </section>
+
+    <!-- SOLUTION -->
+    <section class="ea-guide">
+  <h2>Bagaimana EA Ini Bekerja?</h2>
+
+  <p>
+    EA ini menggunakan kombinasi <strong>Martingale Dinamis</strong> dan
+    <strong>Trend Filter</strong> untuk menjaga entry tetap searah tren
+    serta mengurangi over-layer pada kondisi market dengan volatilitas tinggi.
+  </p>
+
+  <p>
+    Sistem dirancang agar EA tidak hanya menambah posisi, tetapi juga
+    mempertimbangkan arah tren dan kondisi market secara keseluruhan.
+  </p>
+
+  <ul>
+    <li>✔ Menghindari entry melawan tren utama</li>
+    <li>✔ Mengurangi tekanan floating saat market tidak stabil</li>
+    <li>✔ Cocok untuk pendekatan semi-otomatis & disiplin</li>
+  </ul>
+
+  <p>
+    Tersedia <strong>3 Mode Risk</strong>: <strong>LOW</strong>,
+    <strong>MEDIUM</strong>, dan <strong>HIGH</strong>.
+    Setiap mode sudah otomatis mengatur <strong>lot awal</strong> dan
+    <strong>target profit</strong>, sehingga trader dapat menyesuaikan
+    risiko tanpa perlu setting rumit.
+  </p>
+
+  <span class="ea-badge">Risk Mode: LOW • MEDIUM • HIGH</span>
+</section>
+
+
+    <!-- FEATURES -->
+    <section>
+  <h2>Fitur Utama</h2>
+  <p>Fitur inti yang dirancang untuk menjaga konsistensi, disiplin, dan kontrol risiko.</p>
+
+  <div class="feature-grid">
+
+    <div class="feature-card">
+      <h3>🛡 Risk Control</h3>
+      <p>
+        Pengaturan lot dan risiko disesuaikan dengan modal serta profil risiko trader,
+        membantu menjaga drawdown tetap terkontrol.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h3>⏰ Time Filter</h3>
+      <p>
+        Kontrol jam trading agar EA hanya bekerja pada sesi market tertentu,
+        menghindari kondisi market sepi atau tidak ideal.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h3>⚙️ Custom Setting</h3>
+      <p>
+        Parameter fleksibel yang dapat disesuaikan dengan gaya trading,
+        baik konservatif maupun agresif.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- SUITABILITY -->
+    <section class="backtest-section">
+  <h2>Hasil Backtest EA</h2>
+  <p>
+    Berikut adalah ringkasan hasil backtest sebagai gambaran performa historis.
+    Hasil ini bukan jaminan performa di masa depan, namun membantu memahami
+    karakter dan risiko strategi.
+  </p>
+
+  <div class="backtest-grid">
+
+    <div class="backtest-card">
+      <h3>📊 Ringkasan Backtest</h3>
+
+      <div class="backtest-metric">
+        <strong>Periode</strong><span>Jan 2021 – Des 2025</span>
+      </div>
+      <div class="backtest-metric">
+        <strong>Pair</strong><span>XAUUSD</span>
+      </div>
+      <div class="backtest-metric">
+        <strong>Timeframe</strong><span>H1</span>
+      </div>
+      <div class="backtest-metric">
+        <strong>Risk Mode</strong><span>MEDIUM</span>
+      </div>
+    </div>
+
+    <div class="backtest-card">
+      <h3>📈 Statistik Utama</h3>
+
+      <div class="backtest-metric">
+        <strong>Total Trade</strong><span>1.345</span>
+      </div>
+      <div class="backtest-metric">
+        <strong>Win Rate</strong><span> 68.99%</span>
+      </div>
+      <div class="backtest-metric">
+        <strong>Max Drawdown</strong><span>-14.74%</span>
+      </div>
+      <div class="backtest-metric">
+        <strong>Profit Factor</strong><span>3.28</span>
+      </div>
+    </div>
+
+    <div class="backtest-card">
+      <h3>⚠️ Catatan Penting</h3>
+      <p class="backtest-note">
+        Backtest dilakukan menggunakan data historis dan kondisi market tertentu.
+        Hasil dapat berbeda pada kondisi market nyata, terutama saat volatilitas
+        ekstrem atau news besar. Manajemen risiko tetap menjadi faktor utama.
+      </p>
+    </div>
+    <div class="backtest-card">
+  <h3>📉 Equity Curve (Backtest)</h3>
+
+  <div class="backtest-image" onclick="openBacktestModal()">
+  <img src="assets/images/backtest-equity.png" alt="Hasil Backtest EA">
+</div>
+
+
+  <p class="backtest-note">
+    Grafik ini menunjukkan pertumbuhan equity berdasarkan data historis.
+    Performa masa lalu tidak menjamin hasil di masa depan.
+  </p>
+</div>
+
+
+  </div>
+</section>
+
+<section class="video-section">
+  <div class="container">
+
+    <h2>Video Hasil Backtest EA</h2>
+    <p>
+      Video ini menampilkan cara kerja EA, hasil backtest.
+    </p>
+
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/3Zvx6HgzUfI"
+        title="Video Backtest EA MATARY"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+
+
+  </div>
+</section>
+
+<!-- EA COLLAB CTA -->
+<section class="ea-collab">
+  <h3>Tertarik Menggunakan EA atau Kerja Sama?</h3>
+  <p>
+    EA ini juga digunakan dalam komunitas <strong>MATARY</strong> sebagai alat bantu
+    eksekusi trading yang disiplin.
+    <br><br>
+    Bagi komunitas, grup, atau trader yang ingin menggunakan EA
+    atau menjalin kerja sama edukasi & pengembangan,
+    silakan hubungi kami untuk diskusi lebih lanjut.
+  </p>
+
+  <a href="https://t.me/mataryclub"
+   target="_blank"
+   class="collab-btn"
+   onclick="gtag('event', 'click_telegram', {
+     event_category: 'CTA',
+     event_label: 'Telegram Collaboration'
+   });">
+  Chat via Telegram
+</a>
+
+</section>
+
+
+
+    <!-- FAQ -->
+<section class="faq">
+  <h2>FAQ</h2>
+
+  <h3>Apakah EA ini profit pasti?</h3>
+  <p>
+    Tidak. Tidak ada sistem trading yang dapat menjamin profit 100%.
+    EA ini adalah alat bantu eksekusi trading untuk membantu disiplin,
+    bukan mesin uang instan.
+  </p>
+
+  <h3>Apakah EA ini menggunakan martingale?</h3>
+  <p>
+    Ya, EA menggunakan konsep <strong>Martingale Dinamis</strong>
+    yang dikombinasikan dengan <strong>Trend Filter</strong>
+    untuk membantu mengurangi entry berlawanan arah tren.
+    Risiko tetap ada dan harus disesuaikan dengan profil trader.
+  </p>
+
+  <h3>Berapa modal minimum yang disarankan?</h3>
+  <p>
+    Modal tergantung pada mode risiko (LOW / MEDIUM / HIGH).
+    Disarankan menggunakan modal yang cukup agar
+    manajemen risiko berjalan optimal.
+  </p>
+
+  <h3>Apakah ada risiko margin call?</h3>
+  <p>
+    Risiko margin call selalu ada dalam trading,
+    terutama pada strategi martingale.
+    Oleh karena itu, pengaturan risiko dan pemilihan mode sangat penting.
+  </p>
+
+  <h3>Apakah ada support setelah penggunaan?</h3>
+  <p>
+    Ya. Anda akan mendapatkan panduan penggunaan,
+    edukasi dasar, serta akses diskusi untuk memahami cara kerja EA dengan benar.
+  </p>
+</section>
+
+
+    <!-- CTA -->
+    <section style="text-align:center">
+      <h2>Ingin Tahu Apakah EA Ini Cocok Untuk Anda?</h2>
+      <p>Pelajari cara kerja, risiko, dan simulasi penggunaan secara langsung.</p>
+      <br>
+      <a href="https://t.me/mataryclub"
+   target="_blank"
+   class="collab-btn"
+   onclick="gtag('event', 'click_telegram', {
+     event_category: 'CTA',
+     event_label: 'Telegram Collaboration'
+   });">
+  Join Sekarang!
+</a>
+    </section>
+
+  </div>
 
   <footer>
-    <p>&copy; 2025 Support Matary. All rights reserved.</p>
+    Trading forex memiliki risiko tinggi. Konten ini bersifat edukasi dan bukan ajakan investasi.
   </footer>
+
+
 </body>
 </html>
-
-
