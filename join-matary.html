@@ -427,13 +427,56 @@
   cursor: pointer;
 }
 
+.disclaimer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.disclaimer-box {
+  max-width: 420px;
+  background: #0b1220;
+  border-radius: 16px;
+  padding: 24px;
+  color: #e5e7eb;
+  border: 1px solid #22c55e;
+}
+
+.agree-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  background: #22c55e;
+  color: #000;
+  border: none;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.disclaimer-warning{
+  margin-top:16px;
+  padding:14px;
+  background:rgba(245,158,11,0.08);
+  border:1px dashed rgba(245,158,11,0.5);
+  color:#fde68a;
+  font-size:13px;
+  line-height:1.6;
+  border-radius:10px;
+}
+
+
 
 
   </style>
 </head>
 
 <!-- DISCLAIMER POPUP -->
-<div id="disclaimerPopup" class="disclaimer-overlay">
+<div id="disclaimerOverlay" class="disclaimer-overlay">
   <div class="disclaimer-box">
     <h3>⚠️ Disclaimer Komunitas MATARY</h3>
 
@@ -455,16 +498,26 @@
       dan eksekusi trading berbasis rule.
     </p>
 
-    <p class="small">
-      Trading memiliki risiko. Segala keputusan trading merupakan
-      tanggung jawab masing-masing individu.
-      Bergabung ke komunitas MATARY sepenuhnya
-      atas <strong>kesadaran pribadi</strong>, tanpa paksaan dari pihak mana pun.
-    </p>
+    <div class="disclaimer-warning">
+  ⚠️ Trading mengandung risiko. Seluruh keputusan trading berada di tangan masing-masing individu.
+</div>
 
-    <button id="acceptDisclaimer">Saya Mengerti & Lanjutkan</button>
+
+
+    <button id="agreeBtn" class="agree-btn">
+      Saya Mengerti & Lanjutkan
+    </button>
   </div>
 </div>
+
+<script>
+  const overlay = document.getElementById("disclaimerOverlay");
+  const agreeBtn = document.getElementById("agreeBtn");
+
+  agreeBtn.addEventListener("click", function () {
+    overlay.style.display = "none";
+  });
+</script>
 
 
 <body>
