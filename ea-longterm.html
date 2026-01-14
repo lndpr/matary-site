@@ -981,141 +981,6 @@ html {
   }
 }
 
-.risk-card.low{
-  border-color:rgba(18, 161, 90, 0.26);
-  background:radial-gradient(circle at top, rgba(12, 207, 94, 0.18), rgba(4, 23, 2, 0));
-}
-.risk-card.medium{
-  border-color:rgba(250,204,21,.45);
-  background:radial-gradient(circle at top, rgba(250,204,21,.18), rgba(2, 6, 23, 0.068));
-}
-.risk-card.high{
-  border-color:rgba(239,68,68,.45);
-  background:radial-gradient(circle at top, rgba(239,68,68,.18), rgba(2, 6, 23, 0));
-}
-
-.risk-card h4{
-  font-size:1.2rem;
-  margin-bottom:10px;
-}
-
-.risk-card p{
-  font-size:.95rem;
-  color:#cbd5f5;
-  line-height:1.6;
-}
-
-.responsibility-box{
-  margin-top:50px;
-  padding:28px;
-  border-radius:18px;
-  background:linear-gradient(180deg,#020617,#020617);
-  border:1px dashed rgba(239,68,68,.6);
-  box-shadow:0 30px 80px rgba(0,0,0,.8);
-}
-
-.responsibility-box h4{
-  color:#ef4444;
-  margin-bottom:12px;
-  font-size:1.15rem;
-}
-
-.responsibility-box ul{
-  list-style:none;
-  padding:0;
-}
-
-.responsibility-box li{
-  margin-bottom:8px;
-  color:#fde68a;
-  font-size:.95rem;
-}
-
-/* ===== DOWNLOAD BACKTEST ===== */
-.download-ea{
-  margin-top:100px;
-  padding:60px;
-  border-radius:26px;
-  background:radial-gradient(
-    circle at top left,
-    rgba(96,165,250,.18),
-    rgba(2,6,23,.96)
-  );
-  border:1px solid rgba(96,165,250,.45);
-  box-shadow:
-    0 40px 120px rgba(0,0,0,.85),
-    inset 0 0 60px rgba(96,165,250,.12);
-}
-
-.download-ea h2{
-  font-size:2rem;
-  margin-bottom:16px;
-  background:linear-gradient(90deg,#60a5fa,#22c55e);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.download-ea p{
-  max-width:900px;
-  color:#cbd5f5;
-  line-height:1.8;
-  margin-bottom:30px;
-}
-
-.download-box{
-  display:flex;
-  flex-wrap:wrap;
-  gap:20px;
-  align-items:center;
-  justify-content:space-between;
-  padding:30px;
-  border-radius:20px;
-  background:rgba(2,6,23,.85);
-  border:1px solid rgba(148,163,184,.25);
-}
-
-.download-info{
-  max-width:600px;
-}
-
-.download-info ul{
-  list-style:none;
-  padding:0;
-  margin-top:16px;
-}
-
-.download-info li{
-  margin-bottom:8px;
-  color:#e5e7eb;
-}
-
-.download-btn{
-  padding:16px 40px;
-  border-radius:999px;
-  background:linear-gradient(90deg,#22c55e,#16a34a);
-  color:#052e16;
-  font-weight:700;
-  text-decoration:none;
-  box-shadow:0 20px 40px rgba(34,197,94,.4);
-  transition:.2s ease;
-}
-
-.download-btn:hover{
-  transform:translateY(-2px);
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .download-ea{
-    padding:36px 20px;
-  }
-  .download-box{
-    flex-direction:column;
-    text-align:center;
-  }
-}
-
-/* ===== MARGIN CALL ===== */
 /* ===== MARGIN CALL WARNING ===== */
 .margin-call{
   margin-top:80px;
@@ -1173,19 +1038,6 @@ html {
     font-size:1.5rem;
   }
 }
-
-/* ===== 1-5% ===== */
-.big-percent{
-  display:block;
-  margin-top:10px;
-  font-size:2rem;
-  font-weight:900;
-  letter-spacing:1px;
-  background:linear-gradient(90deg,#60a5fa,#22c55e);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
 
 
   </style>
@@ -1261,10 +1113,9 @@ html {
       <img src="assets/img/logo-matary.png" alt="MATARY Logo">
     </a>
 
-    <!-- MENU -->
     <ul class="nav-menu">
-  <li><a href="/">JOIN MATARY</a></li>
-  <li><a href="/ea-harian.html" class="active">EA HARIAN</a></li>
+  <li><a href="/" class="active">JOIN MATARY</a></li>
+  <li><a href="/ea-harian.html">EA HARIAN</a></li>
   <li><a href="/ea-longterm.html">EA LONG-TERM</a></li>
 </ul>
 
@@ -1273,30 +1124,23 @@ html {
 </nav>
 
 
-<!-- HERO -->
+
+
 <!-- HERO -->
 <div class="hero">
   <span class="badge-free">GRATIS</span>
-
-  <h1>Expert Advisor Forex<br>untuk Trading Konsisten</h1>
-
-  <p class="hero-highlight">
-  Fokus utama EA MATARY V3 adalah
-  <strong>trading konsisten harian</strong><br>
-  <span class="big-percent">1–5% / hari</span>
-</p>
-
-
-  <p style="font-size:13px;color:#94a3b8;margin-top:8px">
-*Target bersifat estimasi, bukan jaminan profit.
-</p>
+  <h1>Expert Advisor Forex<br>untuk Eksekusi Trading Lebih Disiplin</h1>
+  <p>EA ini dirancang sebagai alat bantu untuk menjalankan strategi trading secara konsisten.</p>
 
   <ul>
-    <li>✔ Fokus konsistensi, bukan profit instan</li>
-    <li>✔ Berbasis rule & manajemen risiko</li>
-    <li>✔ Membantu mengurangi human error</li>
-    <li>✔ Risiko tetap diatur oleh pengguna</li>
+    <li>✔ Berbasis rule & logic</li>
+    <li>✔ Mengurangi human error</li>
+    <li>✔ Tidak bayar license</li>
+    <li>✔ 100% gratis untuk member Matary</li>
   </ul>
+
+  <a href="#backtest" class="btn">Pelajari Cara Kerjanya</a>
+
 </div>
 
 <div class="container">
@@ -1314,33 +1158,36 @@ html {
   </section>
 
     <!-- SOLUTION -->
-<section class="ea-guide">
-  <h2>Bagaimana EA HARIAN Ini Bekerja?</h2>
+    <section class="ea-guide">
+  <h2>Bagaimana EA Ini Bekerja?</h2>
 
   <p>
-    EA MATARY HARIAN dirancang untuk membantu trader
-    <strong>menjaga konsistensi trading harian</strong>,
-    bukan mengejar profit besar dalam waktu singkat.
+    EA ini menggunakan kombinasi <strong>Martingale Dinamis</strong> dan
+    <strong>Trend Filter</strong> untuk menjaga entry tetap searah tren
+    serta mengurangi over-layer pada kondisi market dengan volatilitas tinggi.
   </p>
 
   <p>
-    Dengan pendekatan disiplin dan target realistis,
-    EA ini menargetkan hasil harian di kisaran
-    <strong>1% – 5% per hari</strong>,
-    tergantung modal dan mode risiko yang digunakan.
+    Sistem dirancang agar EA tidak hanya menambah posisi, tetapi juga
+    mempertimbangkan arah tren dan kondisi market secara keseluruhan.
   </p>
+
+  <ul>
+    <li>✔ Menghindari entry melawan tren utama</li>
+    <li>✔ Mengurangi tekanan floating saat market tidak stabil</li>
+    <li>✔ Cocok untuk pendekatan semi-otomatis & disiplin</li>
+  </ul>
 
   <p>
-    EA bekerja menggunakan <strong>Martingale Dinamis</strong>
-    yang dikombinasikan dengan <strong>filter arah tren</strong>
-    agar entry tetap terkontrol dan tidak asal masuk market.
+    Tersedia <strong>3 Mode Risk</strong>: <strong>LOW</strong>,
+    <strong>MEDIUM</strong>, dan <strong>HIGH</strong>.
+    Setiap mode sudah otomatis mengatur <strong>lot awal</strong> dan
+    <strong>target profit</strong>, sehingga trader dapat menyesuaikan
+    risiko tanpa perlu setting rumit.
   </p>
 
-  <span class="ea-badge">
-    Target Kecil • Konsisten • Risiko di Kendali User
-  </span>
+  <span class="ea-badge">Risk Mode: LOW • MEDIUM • HIGH</span>
 </section>
-
 
 
     <!-- FEATURES -->
@@ -1378,106 +1225,94 @@ html {
 </section>
 
 
-    <section class="ea-guide">
-  <h2>Mode Risiko dan Minimal Balance</h2>
-
+    <!-- SUITABILITY -->
+    <section class="backtest-section" id="backtest">
+  <h2>Hasil Backtest EA</h2>
   <p>
-    EA MATARY HARIAN menyediakan <strong>3 Mode Risiko</strong> yang dapat dipilih
-    sesuai karakter dan kesiapan masing-masing trader.
-    Seluruh pengaturan bersifat <strong>fleksibel</strong> dan berada sepenuhnya
-    di tangan pengguna.
+    Berikut adalah ringkasan hasil backtest sebagai gambaran performa historis.
+    Hasil ini bukan jaminan performa di masa depan, namun membantu memahami
+    karakter dan risiko strategi.
   </p>
 
-  <!-- RISK MODE -->
-  <div class="risk-grid">
+  <div class="backtest-grid">
 
-    <div class="risk-card low">
-      <h4>🟢 LOW RISK</h4>
-      <p>
-        Fokus pada kestabilan dan minim balance.
-      </p>
+    <div class="backtest-card">
+      <h3>📊 Ringkasan Backtest</h3>
+
+      <div class="backtest-metric">
+        <strong>Periode</strong><span>Jan 2021 – Des 2025</span>
+      </div>
+      <div class="backtest-metric">
+        <strong>Pair</strong><span>XAUUSD</span>
+      </div>
+      <div class="backtest-metric">
+        <strong>Timeframe</strong><span>H1</span>
+      </div>
+      <div class="backtest-metric">
+        <strong>Risk Mode</strong><span>MEDIUM</span>
+      </div>
     </div>
 
-    <div class="risk-card medium">
-      <h4>🟡 MEDIUM RISK</h4>
-      <p>
-        Keseimbangan antara pertumbuhan dan risiko.
-      </p>
+    <div class="backtest-card">
+      <h3>📈 Statistik Utama</h3>
+
+      <div class="backtest-metric">
+        <strong>Total Trade</strong><span>1.345</span>
+      </div>
+      <div class="backtest-metric">
+        <strong>Win Rate</strong><span> 68.99%</span>
+      </div>
+      <div class="backtest-metric">
+        <strong>Max Drawdown</strong><span>-14.74%</span>
+      </div>
+      <div class="backtest-metric">
+        <strong>Profit Factor</strong><span>3.28</span>
+      </div>
     </div>
 
-    <div class="risk-card high">
-      <h4>🔴 HIGH RISK</h4>
-      <p>
-        Potensi agresif dengan risiko tinggi.
+    <div class="backtest-card">
+      <h3>⚠️ Catatan Penting</h3>
+      <p class="backtest-note">
+        Backtest dilakukan menggunakan data historis dan kondisi market tertentu.
+        Hasil dapat berbeda pada kondisi market nyata, terutama saat volatilitas
+        ekstrem atau news besar. Manajemen risiko tetap menjadi faktor utama.
       </p>
     </div>
+    <div class="backtest-card">
+  <h3>📉 Equity Curve (Backtest)</h3>
 
-  </div>
+  <div class="backtest-image" onclick="openBacktestModal()">
+  <img src="assets/images/backtest-equity.png" alt="Hasil Backtest EA">
+</div>
 
-  <p>
-    Setiap mode memiliki karakter <strong>floating yang berbeda</strong>.
-    Oleh karena itu, <strong>modal minimum tidak ditentukan secara mutlak</strong>,
-    melainkan disarankan berdasarkan hasil <strong>backtest</strong> dan
-    <strong>floating maksimum</strong> yang pernah terjadi.
+
+  <p class="backtest-note">
+    Grafik ini menunjukkan pertumbuhan equity berdasarkan data historis.
+    Performa masa lalu tidak menjamin hasil di masa depan.
   </p>
+</div>
 
-  <p><strong>Pengguna WAJIB melakukan backtest mandiri</strong> untuk menyesuaikan:</p>
 
-  <ul>
-    <li>✔ Modal yang digunakan</li>
-    <li>✔ Mode risiko yang dipilih</li>
-    <li>✔ Batas toleransi floating & drawdown</li>
-  </ul>
-
-  <!-- RESPONSIBILITY -->
-  <div class="responsibility-box">
-    <h4>⚠️ Tanggung Jawab Pengguna</h4>
-    <ul>
-      <li>Trading memiliki risiko dan dapat menyebabkan kerugian</li>
-      <li>EA hanya alat bantu eksekusi, bukan jaminan profit</li>
-      <li>Seluruh keputusan & risiko sepenuhnya tanggung jawab pengguna</li>
-    </ul>
   </div>
 </section>
 
-<section class="download-ea">
-  <h2>Download File EA untuk Backtest Mandiri</h2>
+<section class="video-section">
+  <div class="container">
 
-  <p>
-    File EA ini disediakan khusus untuk keperluan
-    <strong>backtest & simulasi</strong>.
-    Tujuannya agar pengguna dapat menyesuaikan
-    <strong>mode risiko</strong> dan
-    <strong>balance</strong>
-    sebelum digunakan di akun real.
-  </p>
+    <h2>Video Hasil Backtest EA</h2>
+    <p>
+      Video ini menampilkan cara kerja EA, hasil backtest.
+    </p>
 
-  <div class="download-box">
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/3Zvx6HgzUfI"
+        title="Video Backtest EA MATARY"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
 
-    <div class="download-info">
-      <strong>Disarankan digunakan untuk:</strong>
-      <ul>
-        <li>✔ Menentukan mode risiko (LOW / MEDIUM / HIGH)</li>
-        <li>✔ Mengukur floating maksimum historis</li>
-        <li>✔ Menyesuaikan balance & toleransi drawdown</li>
-        <li>✔ Memahami karakter EA sebelum real trading</li>
-      </ul>
-
-      <p style="margin-top:14px;font-size:13px;color:#94a3b8">
-        Catatan: Hasil backtest bersifat historis dan tidak menjamin
-        performa di masa depan. Gunakan sebagai acuan manajemen risiko.
-      </p>
-    </div>
-
-    <a href="assets/ea/EA-MATARY-V3.ex5"
-       class="download-btn"
-       download
-       onclick="gtag('event','download_ea_backtest',{
-         event_category:'EA',
-         event_label:'EA Harian Backtest'
-       });">
-       ⬇ Download EA Backtest
-    </a>
 
   </div>
 </section>
@@ -1512,13 +1347,10 @@ html {
   </div>
 </section>
 
-
-
-
 <!-- CARA KLAIM EA -->
 <section class="claim-ea">
   <div class="container">
-    <h2>Cara Klaim EA MATARY V3</h2>
+    <h2>Cara Klaim EA MATARY</h2>
     <p class="subtitle">
       Ikuti langkah berikut untuk mendapatkan akses EA MATARY.
     </p>
