@@ -981,6 +981,63 @@ html {
   }
 }
 
+/* ===== MARGIN CALL WARNING ===== */
+.margin-call{
+  margin-top:80px;
+  padding:50px;
+  border-radius:26px;
+  background:radial-gradient(
+    circle at top left,
+    rgba(239,68,68,.18),
+    rgba(2,6,23,.96)
+  );
+  border:1px solid rgba(239,68,68,.45);
+  box-shadow:
+    0 40px 120px rgba(0,0,0,.85),
+    inset 0 0 60px rgba(239,68,68,.12);
+}
+
+.margin-call h3{
+  font-size:1.9rem;
+  margin-bottom:18px;
+  color:#f87171;
+}
+
+.margin-call p{
+  color:#e5e7eb;
+  max-width:900px;
+  line-height:1.8;
+}
+
+.margin-call ul{
+  margin-top:20px;
+  padding-left:20px;
+}
+
+.margin-call li{
+  margin-bottom:10px;
+  color:#fecaca;
+}
+
+.margin-call-note{
+  margin-top:26px;
+  padding:20px;
+  border-radius:16px;
+  background:rgba(2,6,23,.85);
+  border:1px dashed rgba(239,68,68,.6);
+  color:#fde68a;
+  font-size:.95rem;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .margin-call{
+    padding:32px 18px;
+  }
+  .margin-call h3{
+    font-size:1.5rem;
+  }
+}
 
 
   </style>
@@ -1056,14 +1113,17 @@ html {
       <img src="assets/img/logo-matary.png" alt="MATARY Logo">
     </a>
 
-    <!-- MENU -->
     <ul class="nav-menu">
-      <li><a href="/" class="active">EA MATARY</a></li>
-      <li><a href="/join-matary.html">Join MATARY</a></li>
-    </ul>
+  <li><a href="/" class="active">EA MATARY</a></li>
+  <li><a href="/ea-harian.html">EA HARIAN</a></li>
+  <li><a href="/join-matary.html">Join MATARY</a></li>
+</ul>
+
 
   </div>
 </nav>
+
+
 
 
 <!-- HERO -->
@@ -1254,6 +1314,36 @@ html {
       </iframe>
 
 
+  </div>
+</section>
+
+<section class="margin-call">
+  <h3>⚠️ Tentang Risiko Margin Call</h3>
+
+  <p>
+    EA MATARY HARIAN menggunakan sistem otomatis berbasis rule.
+    Namun perlu dipahami bahwa <strong>Margin Call adalah risiko nyata</strong>
+    dalam trading, terutama pada strategi yang menggunakan
+    <strong>penambahan posisi (martingale)</strong>.
+  </p>
+
+  <ul>
+    <li>❌ Margin Call bisa terjadi jika <strong>modal tidak mencukupi</strong></li>
+    <li>❌ Risiko meningkat saat <strong>mode HIGH RISK</strong> digunakan</li>
+    <li>❌ Kondisi market ekstrem (news besar, volatilitas tinggi)</li>
+    <li>❌ Penggunaan lot agresif tanpa backtest</li>
+  </ul>
+
+  <div class="margin-call-note">
+    <strong>PENTING:</strong><br>
+    EA tidak menjamin akun bebas Margin Call.
+    Oleh karena itu, pengguna <strong>wajib melakukan backtest mandiri</strong>,
+    memilih mode risiko yang sesuai,
+    serta menggunakan dana yang siap menerima risiko.
+    <br><br>
+    EA hanya berfungsi sebagai <strong>alat bantu eksekusi</strong>.
+    Seluruh risiko dan keputusan trading
+    adalah <strong>tanggung jawab penuh pengguna</strong>.
   </div>
 </section>
 
