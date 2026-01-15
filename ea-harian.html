@@ -981,29 +981,119 @@ html {
   }
 }
 
-.risk-card.low{
-  border-color:rgba(18, 161, 90, 0.26);
-  background:radial-gradient(circle at top, rgba(12, 207, 94, 0.18), rgba(4, 23, 2, 0));
-}
-.risk-card.medium{
-  border-color:rgba(250,204,21,.45);
-  background:radial-gradient(circle at top, rgba(250,204,21,.18), rgba(2, 6, 23, 0.068));
-}
-.risk-card.high{
-  border-color:rgba(239,68,68,.45);
-  background:radial-gradient(circle at top, rgba(239,68,68,.18), rgba(2, 6, 23, 0));
+/* ===== PREMIUM RISK SECTION ===== */
+.risk-premium{
+  max-width:720px;
+  margin:auto;
+  padding:80px 16px;
 }
 
-.risk-card h4{
-  font-size:1.2rem;
+/* Title */
+.risk-title{
+  font-size:1.9rem;
+  font-weight:700;
   margin-bottom:10px;
+  background:linear-gradient(90deg,#22c55e,#60a5fa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-.risk-card p{
-  font-size:.95rem;
-  color:#cbd5f5;
-  line-height:1.6;
+.risk-title span{
+  opacity:.9;
 }
+
+.risk-subtitle{
+  font-size:14px;
+  color:#94a3b8;
+  max-width:520px;
+  margin-bottom:36px;
+  line-height:1.7;
+}
+
+/* Grid */
+.risk-grid{
+  display:grid;
+  gap:18px;
+}
+
+/* Card */
+.risk-box{
+  position:relative;
+  padding:20px 20px 22px;
+  border-radius:20px;
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,.08), transparent 60%),
+    rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 20px 50px rgba(0,0,0,.55);
+}
+
+/* Header */
+.risk-head{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:8px;
+}
+
+.risk-head h4{
+  margin:0;
+  font-size:15px;
+  letter-spacing:.5px;
+}
+
+/* Dot */
+.risk-dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+}
+
+/* Text */
+.risk-box p{
+  font-size:13px;
+  line-height:1.6;
+  color:#cbd5f5;
+}
+
+/* Color Variants */
+.risk-box.low{
+  border-color:rgba(34,197,94,.45);
+}
+.risk-box.low .risk-dot{
+  background:#22c55e;
+  box-shadow:0 0 12px rgba(34,197,94,.6);
+}
+
+.risk-box.medium{
+  border-color:rgba(250,204,21,.45);
+}
+.risk-box.medium .risk-dot{
+  background:#facc15;
+  box-shadow:0 0 12px rgba(250,204,21,.6);
+}
+
+.risk-box.high{
+  border-color:rgba(239,68,68,.45);
+}
+.risk-box.high .risk-dot{
+  background:#ef4444;
+  box-shadow:0 0 12px rgba(239,68,68,.6);
+}
+
+/* Warning Note */
+.risk-note{
+  margin-top:34px;
+  padding:18px;
+  border-radius:16px;
+  font-size:13px;
+  line-height:1.7;
+  background:
+    linear-gradient(180deg, rgba(245,158,11,.12), rgba(245,158,11,.04));
+  border:1px dashed rgba(245,158,11,.55);
+  color:#fde68a;
+}
+
 
 .responsibility-box{
   margin-top:50px;
@@ -1375,6 +1465,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </section>
 
+  
     <!-- SOLUTION -->
 <section class="ea-guide">
   <h2>Bagaimana EA HARIAN Ini Bekerja?</h2>
@@ -1440,67 +1531,64 @@ document.addEventListener("DOMContentLoaded", function () {
 </section>
 
 
-    <section class="ea-guide">
-  <h2>Mode Risiko dan Minimal Balance</h2>
+   <section class="risk-premium">
 
-  <p>
-    EA MATARY HARIAN menyediakan <strong>3 Mode Risiko</strong> yang dapat dipilih
-    sesuai karakter dan kesiapan masing-masing trader.
-    Seluruh pengaturan bersifat <strong>fleksibel</strong> dan berada sepenuhnya
-    di tangan pengguna.
+  <h2 class="risk-title">
+    Mode Risiko <span>& Balance</span>
+  </h2>
+
+  <p class="risk-subtitle">
+    Setiap mode dirancang untuk karakter trader yang berbeda.
+    Seluruh risiko <strong>dikontrol & diputuskan oleh pengguna</strong>.
   </p>
 
-  <!-- RISK MODE -->
   <div class="risk-grid">
 
-    <div class="risk-card low">
-      <h4>🟢 LOW RISK</h4>
+    <div class="risk-box low">
+      <div class="risk-head">
+        <span class="risk-dot"></span>
+        <h4>LOW RISK</h4>
+      </div>
       <p>
-        Fokus pada kestabilan dan minim balance.
+        Fokus kestabilan, tekanan floating lebih ringan.
+        Cocok untuk konsistensi jangka panjang.
       </p>
     </div>
 
-    <div class="risk-card medium">
-      <h4>🟡 MEDIUM RISK</h4>
+    <div class="risk-box medium">
+      <div class="risk-head">
+        <span class="risk-dot"></span>
+        <h4>MEDIUM RISK</h4>
+      </div>
       <p>
         Keseimbangan antara pertumbuhan dan risiko.
+        Mode paling umum digunakan.
       </p>
     </div>
 
-    <div class="risk-card high">
-      <h4>🔴 HIGH RISK</h4>
+    <div class="risk-box high">
+      <div class="risk-head">
+        <span class="risk-dot"></span>
+        <h4>HIGH RISK</h4>
+      </div>
       <p>
         Potensi agresif dengan risiko tinggi.
+        Hanya untuk trader berpengalaman.
       </p>
     </div>
 
   </div>
 
-  <p>
-    Setiap mode memiliki karakter <strong>floating yang berbeda</strong>.
-    Oleh karena itu, <strong>modal minimum tidak ditentukan secara mutlak</strong>,
-    melainkan disarankan berdasarkan hasil <strong>backtest</strong> dan
-    <strong>floating maksimum</strong> yang pernah terjadi.
-  </p>
-
-  <p><strong>Pengguna WAJIB melakukan backtest mandiri</strong> untuk menyesuaikan:</p>
-
-  <ul>
-    <li>✔ Modal yang digunakan</li>
-    <li>✔ Mode risiko yang dipilih</li>
-    <li>✔ Batas toleransi floating & drawdown</li>
-  </ul>
-
-  <!-- RESPONSIBILITY -->
-  <div class="responsibility-box">
-    <h4>⚠️ Tanggung Jawab Pengguna</h4>
-    <ul>
-      <li>Trading memiliki risiko dan dapat menyebabkan kerugian</li>
-      <li>EA hanya alat bantu eksekusi, bukan jaminan profit</li>
-      <li>Seluruh keputusan & risiko sepenuhnya tanggung jawab pengguna</li>
-    </ul>
+  <div class="risk-note">
+    ⚠️ <strong>Tidak ada modal minimum mutlak.</strong><br>
+    Balance disarankan berdasarkan hasil <b>backtest pribadi</b>
+    dan <b>floating maksimum</b> yang pernah terjadi.
+    Seluruh risiko menjadi <b>tanggung jawab pengguna</b>.
   </div>
+
 </section>
+
+
 
 <section class="download-ea">
   <h2>Download File EA untuk Backtest Mandiri</h2>
