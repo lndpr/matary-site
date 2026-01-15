@@ -1039,6 +1039,56 @@ html {
   }
 }
 
+/* ===== HAMBURGER MENU ===== */
+.menu-toggle{
+  display:none;
+  font-size:26px;
+  background:none;
+  border:none;
+  color:#22c55e;
+  cursor:pointer;
+  position: relative;
+  z-index: 10000;
+}
+
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px){
+
+  .nav-container{
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav-menu{
+    display:none;
+    width:100%;
+    flex-direction:column;
+    text-align:center;
+    margin-top:12px;
+    gap:12px;
+  }
+
+  .nav-menu.active{
+    display:flex;
+  }
+
+  .nav-menu a{
+    padding:10px;
+    font-size:14px;
+  }
+  
+  .navbar{
+  position: sticky;
+  top: 0;
+  z-index: 9999; /* PENTING */
+}
+
+}
+
 
   </style>
 </head>
@@ -1101,6 +1151,18 @@ html {
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+
+  if(menuToggle && navMenu){
+    menuToggle.addEventListener("click", function () {
+      navMenu.classList.toggle("active");
+    });
+  }
+});
+</script>
 
 <body>
 
@@ -1112,15 +1174,13 @@ html {
     <a href="/" class="logo">
       <img src="assets/img/logo-matary.png" alt="MATARY Logo">
     </a>
-
-    <ul class="nav-menu">
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <!-- MENU -->
+    <ul class="nav-menu" id="navMenu">
   <li><a href="/">JOIN MATARY</a></li>
   <li><a href="/ea-harian.html">EA HARIAN</a></li>
   <li><a href="/ea-longterm.html" class="active">EA LONG-TERM</a></li>
   </ul>
-
-
-
   </div>
 </nav>
 

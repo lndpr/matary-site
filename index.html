@@ -590,7 +590,10 @@
   border:none;
   color:#22c55e;
   cursor:pointer;
+  position: relative;
+  z-index: 10000;
 }
+
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px){
@@ -620,6 +623,13 @@
     padding:10px;
     font-size:14px;
   }
+  
+  .navbar{
+  position: sticky;
+  top: 0;
+  z-index: 9999; /* PENTING */
+}
+
 }
 
 
@@ -672,12 +682,18 @@
 </script>
 
 <script>
-  document.querySelectorAll("#navMenu a").forEach(link => {
-    link.addEventListener("click", () => {
-      navMenu.classList.remove("active");
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+
+  if(menuToggle && navMenu){
+    menuToggle.addEventListener("click", function () {
+      navMenu.classList.toggle("active");
     });
-  });
+  }
+});
 </script>
+
 
 <body>
 
