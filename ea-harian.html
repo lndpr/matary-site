@@ -1254,6 +1254,28 @@ html {
   font-size:.95rem;
 }
 
+.risk-link{
+  display:inline-block;
+  margin-top:14px;
+  font-size:13px;
+  color:#facc15;
+  text-decoration:none;
+  border-bottom:1px dashed rgba(250,204,21,.5);
+}
+
+.risk-link:hover{
+  color:#fde047;
+}
+
+.risk-link.danger{
+  color:#ef4444;
+  border-bottom-color:rgba(239,68,68,.6);
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 /* MOBILE */
 @media(max-width:768px){
   .margin-call{
@@ -1632,8 +1654,8 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </section>
 
-<section class="margin-call">
-  <h3>⚠️ Tentang Risiko Margin Call</h3>
+<section id="margin-call" class="margin-call">
+  <h3>⚠️Risiko Margin Call</h3>
 
   <p>
     EA MATARY HARIAN menggunakan sistem otomatis berbasis rule.
