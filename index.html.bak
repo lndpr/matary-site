@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZONA A1 — Commercial License</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo"><a href="index.html">ZONA <span class="a1">A1</span></a></div>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link active">Home</a>
+    <a href="panduan.html" class="nav-link">Panduan</a>
+    <a href="#buy" class="nav-btn">Get License — $500</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="orb"></div>
+  <div class="orb2"></div>
+  <div class="hero-content">
+    <div class="chip"><span class="chip-dot"></span>Commercial License — Resell Under Your Brand</div>
+    <h1>ZONA <span class="g">A1</span><br>Trading System</h1>
+    <p class="hero-sub">A complete 3-in-1 algorithmic trading system — TradingView Strategy, MT5 Indicator & Expert Advisor. Proven by 1,000+ traders. Yours to sell.</p>
+
+    <div class="free-highlight">
+      Start with free community access.<br>
+      Upgrade to unlock full system, automation, and commercial rights.
+    </div>
+    <p class="price-note">One-Time · Full Rebrand Rights · Updates Included</p>
+
+    <div class="btns">
+      <a href="#buy" class="btn-main">Get Commercial License</a>
+      <a href="panduan.html" class="btn-ghost">Lihat Panduan</a>
+    </div>
+
+    <div class="trust r">
+      <div class="t-item"><span class="t-num">1,000+</span><span class="t-label">Active Traders</span></div>
+      <div class="t-item"><span class="t-num">3-in-1</span><span class="t-label">Integrated Tools</span></div>
+      <div class="t-item"><span class="t-num">Auto</span><span class="t-label">Break Even TP1</span></div>
+      <div class="t-item"><span class="t-num">Full</span><span class="t-label">Source Code</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 TOOLS — HERO SECTION -->
+<section class="tools-section">
+  <div class="wrap">
+    <div class="r" style="max-width:700px;">
+      <div class="sec-label">The Core System</div>
+      <h2 class="sec-h2">Three Tools,<br><span>One Strategy Logic</span></h2>
+      <p class="sec-p" style="max-width:600px;">Semua platform, satu logika. TradingView untuk analisis & backtest, MT5 untuk trading live, EA untuk full otomasi — semuanya berjalan di atas engine Block Rejection yang sama.</p>
+    </div>
+
+    <div class="tools-grid r">
+
+      <!-- TRADINGVIEW -->
+      <div class="tool-card tc-tv">
+        <div class="tool-illus">
+          <svg viewBox="0 0 280 140" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block;">
+            <!-- grid lines -->
+            <line x1="0" y1="30"  x2="280" y2="30"  stroke="rgba(79,127,255,0.1)" stroke-width="1"/>
+            <line x1="0" y1="60"  x2="280" y2="60"  stroke="rgba(79,127,255,0.1)" stroke-width="1"/>
+            <line x1="0" y1="90"  x2="280" y2="90"  stroke="rgba(79,127,255,0.1)" stroke-width="1"/>
+            <line x1="0" y1="120" x2="280" y2="120" stroke="rgba(79,127,255,0.1)" stroke-width="1"/>
+            <line x1="40"  y1="0" x2="40"  y2="140" stroke="rgba(79,127,255,0.06)" stroke-width="1"/>
+            <line x1="100" y1="0" x2="100" y2="140" stroke="rgba(79,127,255,0.06)" stroke-width="1"/>
+            <line x1="160" y1="0" x2="160" y2="140" stroke="rgba(79,127,255,0.06)" stroke-width="1"/>
+            <line x1="220" y1="0" x2="220" y2="140" stroke="rgba(79,127,255,0.06)" stroke-width="1"/>
+            <!-- candles bearish run -->
+            <rect x="14" y="50" width="12" height="28" rx="2" fill="#F23645" opacity=".85"/>
+            <line x1="20" y1="44" x2="20" y2="50" stroke="#F23645" stroke-width="1.5"/>
+            <line x1="20" y1="78" x2="20" y2="84" stroke="#F23645" stroke-width="1.5"/>
+            <rect x="34" y="58" width="12" height="32" rx="2" fill="#F23645" opacity=".85"/>
+            <line x1="40" y1="52" x2="40" y2="58" stroke="#F23645" stroke-width="1.5"/>
+            <line x1="40" y1="90" x2="40" y2="96" stroke="#F23645" stroke-width="1.5"/>
+            <!-- BOS break line -->
+            <line x1="50" y1="50" x2="50" y2="140" stroke="#4F7FFF" stroke-width="1" stroke-dasharray="3 2" opacity=".5"/>
+            <text x="53" y="46" font-size="8" fill="#4F7FFF" font-family="monospace" opacity=".9">BREAK</text>
+            <!-- zona BR1 box -->
+            <rect x="55" y="72" width="90" height="22" rx="3" fill="rgba(79,127,255,0.12)" stroke="#4F7FFF" stroke-width="1" stroke-dasharray="3 2"/>
+            <text x="59" y="87" font-size="7.5" fill="#4F7FFF" font-family="monospace" font-weight="700">BUY BR 1</text>
+            <!-- zona BR2 box -->
+            <rect x="55" y="96" width="90" height="18" rx="3" fill="rgba(167,139,250,0.1)" stroke="#a78bfa" stroke-width="1" stroke-dasharray="3 2"/>
+            <text x="59" y="109" font-size="7.5" fill="#a78bfa" font-family="monospace" font-weight="700">BUY BR 2</text>
+            <!-- candles bullish retest + bounce -->
+            <rect x="60" y="78" width="12" height="16" rx="2" fill="#089981" opacity=".9"/>
+            <line x1="66" y1="72" x2="66" y2="78" stroke="#089981" stroke-width="1.5"/>
+            <line x1="66" y1="94" x2="66" y2="100" stroke="#089981" stroke-width="1.5"/>
+            <rect x="80" y="68" width="12" height="18" rx="2" fill="#089981" opacity=".9"/>
+            <line x1="86" y1="62" x2="86" y2="68" stroke="#089981" stroke-width="1.5"/>
+            <line x1="86" y1="86" x2="86" y2="92" stroke="#089981" stroke-width="1.5"/>
+            <!-- entry arrow -->
+            <polygon points="106,83 116,78 116,88" fill="#00CFFF" opacity=".9"/>
+            <!-- TP lines -->
+            <line x1="118" y1="65" x2="270" y2="65" stroke="#22C55E" stroke-width="1" stroke-dasharray="4 3"/>
+            <line x1="118" y1="50" x2="270" y2="50" stroke="#22C55E" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="118" y1="36" x2="270" y2="36" stroke="#22C55E" stroke-width="2" opacity=".9"/>
+            <!-- SL line -->
+            <line x1="118" y1="115" x2="270" y2="115" stroke="#F23645" stroke-width="1" stroke-dasharray="4 3" opacity=".7"/>
+            <!-- TP labels -->
+            <text x="235" y="62" font-size="8" fill="#22C55E" font-family="monospace">TP1</text>
+            <text x="235" y="47" font-size="8" fill="#22C55E" font-family="monospace">TP2</text>
+            <text x="235" y="33" font-size="8" fill="#22C55E" font-family="monospace">TP3</text>
+            <text x="237" y="112" font-size="8" fill="#F23645" font-family="monospace" opacity=".8">SL</text>
+            <!-- bullish candles after entry -->
+            <rect x="122" y="55" width="10" height="18" rx="2" fill="#089981" opacity=".9"/>
+            <rect x="138" y="44" width="10" height="20" rx="2" fill="#089981" opacity=".9"/>
+            <rect x="154" y="34" width="10" height="18" rx="2" fill="#089981" opacity=".9"/>
+            <rect x="170" y="28" width="10" height="14" rx="2" fill="#089981" opacity=".85"/>
+            <!-- BE lock icon at TP1 -->
+            <rect x="195" y="58" width="28" height="14" rx="4" fill="rgba(0,207,255,0.15)" stroke="#00CFFF" stroke-width="0.8"/>
+            <text x="198" y="69" font-size="7" fill="#00CFFF" font-family="monospace">🔒 BE</text>
+          </svg>
+        </div>
+        <div class="tool-sub">Platform · TradingView</div>
+        <h3>Strategy Pine Script</h3>
+        <p>Engine utama sistem. Full backtest, auto-deteksi swing structure, plot zona BR 1 & BR 2 secara real-time, sinyal entry lengkap dengan garis SL/TP di chart.</p>
+        <ul class="tool-features">
+          <li><span class="tf-dot tf-dot-b"></span>Auto-deteksi Break of Structure (BOS/CHoCH)</li>
+          <li><span class="tf-dot tf-dot-b"></span>Plot zona BR 1 & BR 2 otomatis setelah break</li>
+          <li><span class="tf-dot tf-dot-b"></span>Dashboard status FRESH / USED / INVALID</li>
+          <li><span class="tf-dot tf-dot-b"></span>Multi-TF trend filter + SL/TP visualizer</li>
+          <li><span class="tf-dot tf-dot-b"></span>Alert TP1, TP2, TP3, SL, BOS/CHoCH</li>
+        </ul>
+        <span class="tool-badge tb-b">Pine Script v5 · Open Source</span>
+      </div>
+
+      <!-- MT5 INDICATOR -->
+      <div class="tool-card tc-mt5">
+        <div class="tool-illus">
+          <svg viewBox="0 0 280 140" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block;">
+            <!-- MT5 terminal frame -->
+            <rect x="8" y="8" width="264" height="124" rx="6" fill="rgba(0,207,255,0.04)" stroke="rgba(0,207,255,0.15)" stroke-width="1"/>
+            <!-- title bar -->
+            <rect x="8" y="8" width="264" height="18" rx="6" fill="rgba(0,207,255,0.08)"/>
+            <rect x="8" y="20" width="264" height="6" fill="rgba(0,207,255,0.08)"/>
+            <circle cx="20" cy="17" r="3" fill="rgba(242,54,69,0.5)"/>
+            <circle cx="30" cy="17" r="3" fill="rgba(245,158,11,0.5)"/>
+            <circle cx="40" cy="17" r="3" fill="rgba(34,197,94,0.5)"/>
+            <text x="110" y="20" font-size="7" fill="rgba(0,207,255,0.6)" font-family="monospace" text-anchor="middle">ZONA A1 · MetaTrader 5</text>
+            <!-- grid -->
+            <line x1="8"   y1="55" x2="272" y2="55" stroke="rgba(0,207,255,0.07)" stroke-width="1"/>
+            <line x1="8"   y1="80" x2="272" y2="80" stroke="rgba(0,207,255,0.07)" stroke-width="1"/>
+            <line x1="8"   y1="105" x2="272" y2="105" stroke="rgba(0,207,255,0.07)" stroke-width="1"/>
+            <!-- MA trend line -->
+            <path d="M12,118 C50,115 80,105 110,95 C140,85 170,72 260,55" fill="none" stroke="#F59E0B" stroke-width="1.5" opacity=".7"/>
+            <!-- BR1 zone -->
+            <rect x="60" y="70" width="148" height="18" rx="3" fill="rgba(0,207,255,0.08)" stroke="rgba(0,207,255,0.3)" stroke-width="1"/>
+            <text x="65" y="83" font-size="7.5" fill="#00CFFF" font-family="monospace" font-weight="700">SELL BR 1</text>
+            <!-- candles -->
+            <rect x="18" y="50" width="8" height="22" rx="1.5" fill="#089981" opacity=".85"/>
+            <line x1="22" y1="44" x2="22" y2="50" stroke="#089981" stroke-width="1.5"/>
+            <rect x="30" y="44" width="8" height="20" rx="1.5" fill="#089981" opacity=".85"/>
+            <line x1="34" y1="38" x2="34" y2="44" stroke="#089981" stroke-width="1.5"/>
+            <!-- break line -->
+            <line x1="44" y1="36" x2="44" y2="132" stroke="#F23645" stroke-width="1" stroke-dasharray="3 2" opacity=".6"/>
+            <text x="46" y="34" font-size="7" fill="#F23645" font-family="monospace">BREAK</text>
+            <!-- bearish retest candles in zone -->
+            <rect x="50" y="68" width="8" height="20" rx="1.5" fill="#F23645" opacity=".9"/>
+            <line x1="54" y1="62" x2="54" y2="68" stroke="#F23645" stroke-width="1.5"/>
+            <!-- entry signal badge -->
+            <rect x="64" y="93" width="52" height="16" rx="4" fill="rgba(242,54,69,0.15)" stroke="rgba(242,54,69,0.35)" stroke-width="0.8"/>
+            <text x="68" y="104" font-size="8" fill="#F23645" font-family="monospace" font-weight="700">▼ SELL</text>
+            <!-- bearish candles move -->
+            <rect x="82"  y="74" width="8" height="22" rx="1.5" fill="#F23645" opacity=".9"/>
+            <rect x="96"  y="82" width="8" height="26" rx="1.5" fill="#F23645" opacity=".9"/>
+            <rect x="110" y="90" width="8" height="28" rx="1.5" fill="#F23645" opacity=".85"/>
+            <rect x="124" y="96" width="8" height="24" rx="1.5" fill="#F23645" opacity=".85"/>
+            <!-- dashboard mini -->
+            <rect x="178" y="32" width="86" height="90" rx="5" fill="rgba(6,8,17,0.8)" stroke="rgba(0,207,255,0.2)" stroke-width="1"/>
+            <text x="184" y="44" font-size="7" fill="rgba(0,207,255,0.7)" font-family="monospace">ZONA A1 STATUS</text>
+            <line x1="180" y1="47" x2="262" y2="47" stroke="rgba(0,207,255,0.15)" stroke-width=".8"/>
+            <text x="184" y="58" font-size="6.5" fill="rgba(240,242,255,0.4)" font-family="monospace">Trend EMA</text>
+            <text x="230" y="58" font-size="6.5" fill="#F23645" font-family="monospace">BLOCK ✘</text>
+            <text x="184" y="69" font-size="6.5" fill="rgba(240,242,255,0.4)" font-family="monospace">Swing Bias</text>
+            <text x="228" y="69" font-size="6.5" fill="#F23645" font-family="monospace">BEARISH</text>
+            <text x="184" y="80" font-size="6.5" fill="rgba(240,242,255,0.4)" font-family="monospace">Zona BR 1</text>
+            <rect x="224" y="73" width="32" height="10" rx="2" fill="rgba(34,197,94,0.15)"/>
+            <text x="228" y="80" font-size="6.5" fill="#22C55E" font-family="monospace">VALID ✔</text>
+            <text x="184" y="91" font-size="6.5" fill="rgba(240,242,255,0.4)" font-family="monospace">Freshness</text>
+            <rect x="218" y="84" width="38" height="10" rx="2" fill="rgba(34,197,94,0.12)"/>
+            <text x="221" y="91" font-size="6.5" fill="#22C55E" font-family="monospace">🟢 FRESH</text>
+            <line x1="180" y1="95" x2="262" y2="95" stroke="rgba(0,207,255,0.12)" stroke-width=".8"/>
+            <text x="184" y="106" font-size="6" fill="rgba(240,242,255,0.25)" font-family="monospace">➤ SHORT STATUS</text>
+            <rect x="218" y="100" width="38" height="10" rx="2" fill="rgba(34,197,94,0.2)"/>
+            <text x="222" y="107" font-size="6.5" fill="#22C55E" font-family="monospace" font-weight="700">VALID ✔</text>
+          </svg>
+        </div>
+        <div class="tool-sub">Platform · MetaTrader 5</div>
+        <h3>MT5 Custom Indicator</h3>
+        <p>Logika zona yang sama, langsung di MetaTrader 5. Tampilkan BR 1 & BR 2, trend MA, dan sinyal entry secara live — tanpa berpindah platform saat trading.</p>
+        <ul class="tool-features">
+          <li><span class="tf-dot"></span>Zona BR 1 & BR 2 real-time di MT5 chart</li>
+          <li><span class="tf-dot"></span>Dashboard FRESH / USED / INVALID live</li>
+          <li><span class="tf-dot"></span>Sinyal visual entry BUY / SELL</li>
+          <li><span class="tf-dot"></span>Kompatibel dengan semua broker MT5</li>
+          <li><span class="tf-dot"></span>Protected per account number</li>
+        </ul>
+        <span class="tool-badge">MQL5 · MT5 · .ex5</span>
+      </div>
+
+      <!-- EA -->
+      <div class="tool-card tc-ea">
+        <div class="tool-illus">
+          <svg viewBox="0 0 280 140" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block;">
+            <!-- flow bg -->
+            <rect x="8" y="8" width="264" height="124" rx="6" fill="rgba(34,197,94,0.03)" stroke="rgba(34,197,94,0.1)" stroke-width="1"/>
+            <!-- flow nodes -->
+            <!-- node 1: detect zone -->
+            <rect x="14" y="20" width="72" height="28" rx="6" fill="rgba(34,197,94,0.1)" stroke="rgba(34,197,94,0.3)" stroke-width="1"/>
+            <text x="50" y="32" font-size="7.5" fill="#22C55E" font-family="monospace" text-anchor="middle" font-weight="700">Detect Zone</text>
+            <text x="50" y="43" font-size="6.5" fill="rgba(34,197,94,0.6)" font-family="monospace" text-anchor="middle">BR 1 / BR 2</text>
+            <!-- arrow -->
+            <line x1="86" y1="34" x2="100" y2="34" stroke="rgba(34,197,94,0.4)" stroke-width="1.5" marker-end="url(#arr-g)"/>
+            <!-- node 2: check -->
+            <rect x="100" y="20" width="72" height="28" rx="6" fill="rgba(0,207,255,0.08)" stroke="rgba(0,207,255,0.25)" stroke-width="1"/>
+            <text x="136" y="32" font-size="7.5" fill="#00CFFF" font-family="monospace" text-anchor="middle" font-weight="700">Check Valid</text>
+            <text x="136" y="43" font-size="6.5" fill="rgba(0,207,255,0.6)" font-family="monospace" text-anchor="middle">Trend + Fresh</text>
+            <!-- arrow -->
+            <line x1="172" y1="34" x2="186" y2="34" stroke="rgba(0,207,255,0.4)" stroke-width="1.5" marker-end="url(#arr-c)"/>
+            <!-- node 3: entry -->
+            <rect x="186" y="20" width="80" height="28" rx="6" fill="rgba(79,127,255,0.1)" stroke="rgba(79,127,255,0.3)" stroke-width="1"/>
+            <text x="226" y="32" font-size="7.5" fill="#4F7FFF" font-family="monospace" text-anchor="middle" font-weight="700">Auto Entry</text>
+            <text x="226" y="43" font-size="6.5" fill="rgba(79,127,255,0.6)" font-family="monospace" text-anchor="middle">Buy / Sell</text>
+            <!-- arrow down from entry -->
+            <line x1="226" y1="48" x2="226" y2="62" stroke="rgba(79,127,255,0.4)" stroke-width="1.5" marker-end="url(#arr-b)"/>
+            <!-- TP management row -->
+            <rect x="158" y="62" width="52" height="24" rx="5" fill="rgba(34,197,94,0.08)" stroke="rgba(34,197,94,0.25)" stroke-width="1"/>
+            <text x="184" y="73" font-size="7" fill="#22C55E" font-family="monospace" text-anchor="middle">TP1 40%</text>
+            <text x="184" y="82" font-size="6" fill="rgba(34,197,94,0.5)" font-family="monospace" text-anchor="middle">partial close</text>
+            <rect x="218" y="62" width="52" height="24" rx="5" fill="rgba(34,197,94,0.08)" stroke="rgba(34,197,94,0.25)" stroke-width="1"/>
+            <text x="244" y="73" font-size="7" fill="#22C55E" font-family="monospace" text-anchor="middle">TP2 40%</text>
+            <text x="244" y="82" font-size="6" fill="rgba(34,197,94,0.5)" font-family="monospace" text-anchor="middle">partial close</text>
+            <!-- arrow down -->
+            <line x1="226" y1="86" x2="226" y2="98" stroke="rgba(34,197,94,0.35)" stroke-width="1.5" marker-end="url(#arr-g)"/>
+            <!-- BE node -->
+            <rect x="158" y="98" width="112" height="24" rx="5" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.25)" stroke-width="1"/>
+            <text x="214" y="109" font-size="7.5" fill="#F59E0B" font-family="monospace" text-anchor="middle" font-weight="700">🔒 Auto Break-Even</text>
+            <text x="214" y="118" font-size="6" fill="rgba(245,158,11,0.55)" font-family="monospace" text-anchor="middle">SL moves to entry after TP1</text>
+            <!-- left side: trade log -->
+            <rect x="14" y="56" width="128" height="72" rx="6" fill="rgba(6,8,17,0.7)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+            <text x="20" y="68" font-size="6.5" fill="rgba(240,242,255,0.35)" font-family="monospace">TRADE LOG</text>
+            <line x1="14" y1="70" x2="142" y2="70" stroke="rgba(255,255,255,0.05)" stroke-width=".8"/>
+            <circle cx="22" cy="80" r="3" fill="rgba(34,197,94,0.5)"/>
+            <text x="28" y="83" font-size="7" fill="rgba(240,242,255,0.55)" font-family="monospace">BUY BR1 — Entry 1.0842</text>
+            <circle cx="22" cy="92" r="3" fill="rgba(0,207,255,0.5)"/>
+            <text x="28" y="95" font-size="7" fill="rgba(240,242,255,0.55)" font-family="monospace">TP1 Hit → BE Active 🔒</text>
+            <circle cx="22" cy="104" r="3" fill="rgba(34,197,94,0.5)"/>
+            <text x="28" y="107" font-size="7" fill="rgba(240,242,255,0.55)" font-family="monospace">TP2 Hit → Partial Close</text>
+            <circle cx="22" cy="116" r="3" fill="rgba(255,214,0,0.6)"/>
+            <text x="28" y="119" font-size="7" fill="#FFD600" font-family="monospace">TP3 Hit 🏆 Full Profit</text>
+            <!-- arrow markers -->
+            <defs>
+              <marker id="arr-g" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L7 4L1 7" fill="none" stroke="rgba(34,197,94,0.6)" stroke-width="1.5"/></marker>
+              <marker id="arr-c" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L7 4L1 7" fill="none" stroke="rgba(0,207,255,0.6)" stroke-width="1.5"/></marker>
+              <marker id="arr-b" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L7 4L1 7" fill="none" stroke="rgba(79,127,255,0.6)" stroke-width="1.5"/></marker>
+            </defs>
+          </svg>
+        </div>
+        <div class="tool-sub">Automation · MetaTrader 5</div>
+        <h3>Expert Advisor (EA)</h3>
+        <p>Trading otomatis penuh. EA membuka posisi, kelola TP1/TP2/TP3 parsial, pindahkan SL ke Break Even setelah TP1 — semua tanpa perlu di depan chart.</p>
+        <ul class="tool-features">
+          <li><span class="tf-dot tf-dot-g"></span>Entry otomatis saat harga masuk zona BR</li>
+          <li><span class="tf-dot tf-dot-g"></span>Partial close TP1 / TP2 / TP3</li>
+          <li><span class="tf-dot tf-dot-g"></span>Auto Break-Even setelah TP1 hit</li>
+          <li><span class="tf-dot tf-dot-g"></span>Filter trend + arah trade (Long/Short/Both)</li>
+          <li><span class="tf-dot tf-dot-g"></span>Protected per account number</li>
+        </ul>
+        <span class="tool-badge tb-g">Auto-Trading · MT5 · .ex5</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- UNLOCK SECTION — what commercial license unlocks -->
+<section class="unlock-section" id="unlock">
+  <div class="wrap">
+    <div class="r" style="text-align:center;max-width:680px;margin-left:auto;margin-right:auto;">
+      <div class="sec-label" style="text-align:center;">Commercial License</div>
+      <h2 class="sec-h2" style="text-align:center;">Yang Dibuka dengan<br><span>Lisensi Komersial</span></h2>
+      <p class="sec-p" style="max-width:560px;margin:0 auto;">Versi gratis hanya memberikan akses pakai. Lisensi komersial membuka source code penuh — Pine Script dan EA MQL5 — yang bisa kamu modifikasi, rebrand, dan jual sebagai produkmu sendiri.</p>
+    </div>
+
+    <div class="unlock-grid r">
+
+      <!-- PINE SCRIPT -->
+      <div class="unlock-card uc-pine">
+        <div class="uc-head">
+          <div class="uc-icon uci-blue">📝</div>
+          <div class="uc-head-text">
+            <h3>Pine Script — Source Code</h3>
+            <p>TradingView Strategy · Open</p>
+          </div>
+        </div>
+        <div class="uc-divider"></div>
+        <ul class="uc-list">
+          <li>
+            <div class="uc-check ucc-blue">✓</div>
+            <span>File <strong style="color:var(--text)">.pine</strong> lengkap — bisa dibuka, diedit, dimodifikasi langsung di TradingView Pine Editor</span>
+          </li>
+          <li>
+            <div class="uc-check ucc-blue">✓</div>
+            <span>Ganti nama strategy, watermark, dan branding menjadi brand kamu sendiri</span>
+          </li>
+          <li>
+            <div class="uc-check ucc-blue">✓</div>
+            <span>Tambah atau ubah logika — zona, filter, TP ratio, alert — sesuai kebutuhan kamu</span>
+          </li>
+          <li>
+            <div class="uc-check ucc-blue">✓</div>
+            <span>Publish ke TradingView sebagai strategy milikmu, jual akses ke member komunitas</span>
+          </li>
+          <li>
+            <div class="uc-check ucc-blue">✓</div>
+            <span>Kode terstruktur, dikomentari — mudah dipahami meski bukan programmer</span>
+          </li>
+        </ul>
+        <div class="uc-bottom">
+          <span class="uc-tag uct-blue">Pine Script v5 · Full Source</span>
+          <span class="uc-note">Tidak dikunci · Edit bebas</span>
+        </div>
+      </div>
+
+      <!-- EA MQL5 -->
+      <div class="unlock-card uc-ea">
+        <div class="uc-head">
+          <div class="uc-icon uci-green">⚙️</div>
+          <div class="uc-head-text">
+            <h3>EA & Indicator — Source Code</h3>
+            <p>MQL5 · MetaTrader 5 · Open</p>
+          </div>
+        </div>
+        <div class="uc-divider"></div>
+        <ul class="uc-list">
+          <li>
+            <div class="uc-check ucc-green">✓</div>
+            <span>File <strong style="color:var(--text)">.mq5</strong> penuh untuk EA dan Indicator — compile sendiri, rebrand nama produk</span>
+          </li>
+          <li>
+            <div class="uc-check ucc-green">✓</div>
+            <span>Ganti nama EA, copyright, dan semua teks yang tampil di MetaTrader — full ownership</span>
+          </li>
+          <li>
+            <div class="uc-check ucc-green">✓</div>
+            <span>Modifikasi logika entry, manajemen TP, lot size, filter — bebas sesuai kebutuhan</span>
+          </li>
+          <li>
+            <div class="uc-check ucc-green">✓</div>
+            <span>Buat sistem lisensi sendiri — lock per account number klien yang beli darimu</span>
+          </li>
+          <li>
+            <div class="uc-check ucc-green">✓</div>
+            <span>Distribusikan file <strong style="color:var(--text)">.ex5</strong> hasil compile ke unlimited klien — tanpa batas</span>
+          </li>
+        </ul>
+        <div class="uc-bottom">
+          <span class="uc-tag uct-green">MQL5 · Full Source · .mq5</span>
+          <span class="uc-note">Compile sendiri · Rebrand bebas</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- comparison strip -->
+    <div class="r" style="margin-top:28px;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--card2);">
+        <div style="padding:18px 24px;border-right:1px solid var(--border);">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:10px;">Akses</div>
+          <div style="font-size:13px;color:var(--muted);">Bisa dipakai</div>
+          <div style="font-size:13px;color:var(--muted);">Source code</div>
+          <div style="font-size:13px;color:var(--muted);">Rebrand & jual</div>
+        </div>
+        <div style="padding:18px 24px;border-right:1px solid var(--border);">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:10px;">Gratis / Member</div>
+          <div style="font-size:13px;color:var(--green);">✔ Ya</div>
+          <div style="font-size:13px;color:var(--red);">✘ Tidak</div>
+          <div style="font-size:13px;color:var(--red);">✘ Tidak</div>
+        </div>
+        <div style="padding:18px 24px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:10px;">Commercial License</div>
+          <div style="font-size:13px;color:var(--green);">✔ Ya</div>
+          <div style="font-size:13px;color:var(--green);">✔ Ya — Pine + MQL5</div>
+          <div style="font-size:13px;color:var(--green);">✔ Ya — unlimited klien</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LIVE CHART VISUAL SECTION -->
+<section class="chart-section">
+  <div class="wrap">
+    <div class="r" style="text-align:center;max-width:680px;margin:0 auto;">
+      <div class="sec-label" style="text-align:center;">Live on Chart</div>
+      <h2 class="sec-h2" style="text-align:center;">Begini Tampilannya<br><span>di Chart Nyata</span></h2>
+      <p class="sec-p" style="max-width:560px;margin:0 auto 48px;">Zona BR 1 &amp; BR 2 otomatis terbentuk setelah break struktur. Dashboard real-time, sinyal entry, SL/TP lines, dan status Freshness — semuanya langsung di chart.</p>
+    </div>
+
+    <div class="chart-frame r">
+
+      <div class="cf-topbar">
+        <div class="cf-pair">
+          <span class="cf-symbol">XAUUSD</span>
+          <span class="cf-tf">Gold Spot / U.S. Dollar · 4H · FXOpen</span>
+        </div>
+        <div class="cf-watermark">— ZONA A1 — <span>Strategy by MataryClub</span></div>
+        <div class="cf-price">4,722.24</div>
+      </div>
+
+      <div class="cf-body">
+        <svg viewBox="0 0 910 460" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block;flex:1;">
+          <!-- grid H -->
+          <line x1="0" y1="50"  x2="730" y2="50"  stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+          <line x1="0" y1="100" x2="730" y2="100" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+          <line x1="0" y1="150" x2="730" y2="150" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+          <line x1="0" y1="200" x2="730" y2="200" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+          <line x1="0" y1="250" x2="730" y2="250" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+          <line x1="0" y1="300" x2="730" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+          <line x1="0" y1="350" x2="730" y2="350" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+          <line x1="0" y1="400" x2="730" y2="400" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+          <!-- price labels -->
+          <text x="736" y="53"  font-size="9" fill="rgba(240,242,255,0.3)" font-family="monospace">5,500</text>
+          <text x="736" y="103" font-size="9" fill="rgba(240,242,255,0.3)" font-family="monospace">5,300</text>
+          <text x="736" y="153" font-size="9" fill="rgba(240,242,255,0.3)" font-family="monospace">5,115</text>
+          <text x="736" y="203" font-size="9" fill="rgba(240,242,255,0.3)" font-family="monospace">5,000</text>
+          <text x="736" y="253" font-size="9" fill="rgba(240,242,255,0.3)" font-family="monospace">4,917</text>
+          <text x="736" y="303" font-size="9" fill="rgba(240,242,255,0.3)" font-family="monospace">4,791</text>
+          <text x="736" y="353" font-size="9" fill="rgba(240,242,255,0.3)" font-family="monospace">4,600</text>
+          <text x="736" y="403" font-size="9" fill="rgba(240,242,255,0.3)" font-family="monospace">4,400</text>
+
+          <!-- date labels -->
+          <text x="20"  y="450" font-size="8.5" fill="rgba(240,242,255,0.25)" font-family="monospace">16 Jan</text>
+          <text x="90"  y="450" font-size="8.5" fill="rgba(240,242,255,0.25)" font-family="monospace">21</text>
+          <text x="145" y="450" font-size="8.5" fill="rgba(240,242,255,0.25)" font-family="monospace">Feb</text>
+          <text x="265" y="450" font-size="8.5" fill="rgba(240,242,255,0.25)" font-family="monospace">10</text>
+          <text x="345" y="450" font-size="8.5" fill="rgba(240,242,255,0.25)" font-family="monospace">18</text>
+          <text x="400" y="450" font-size="8.5" fill="rgba(240,242,255,0.25)" font-family="monospace">Mar</text>
+          <text x="460" y="450" font-size="8.5" fill="rgba(240,242,255,0.25)" font-family="monospace">10</text>
+          <text x="510" y="450" font-size="8.5" fill="rgba(240,242,255,0.25)" font-family="monospace">18</text>
+          <text x="555" y="450" font-size="8.5" fill="rgba(240,242,255,0.25)" font-family="monospace">21</text>
+          <text x="605" y="450" font-size="8.5" fill="rgba(240,242,255,0.25)" font-family="monospace">Apr</text>
+          <text x="660" y="450" font-size="8.5" fill="rgba(240,242,255,0.25)" font-family="monospace">4</text>
+
+          <!-- Phase 1: Jan small candles bullish -->
+          <rect x="18"  y="330" width="6" height="28" rx="1" fill="#089981"/><line x1="21"  y1="322" x2="21"  y2="330" stroke="#089981" stroke-width="1.2"/>
+          <rect x="29"  y="315" width="6" height="26" rx="1" fill="#089981"/><line x1="32"  y1="307" x2="32"  y2="315" stroke="#089981" stroke-width="1.2"/>
+          <rect x="40"  y="300" width="6" height="30" rx="1" fill="#089981"/>
+          <rect x="51"  y="280" width="6" height="32" rx="1" fill="#F23645"/>
+          <rect x="62"  y="288" width="6" height="24" rx="1" fill="#089981"/>
+          <rect x="73"  y="265" width="6" height="32" rx="1" fill="#089981"/>
+          <rect x="84"  y="242" width="6" height="36" rx="1" fill="#089981"/>
+          <rect x="95"  y="224" width="6" height="32" rx="1" fill="#089981"/>
+          <!-- peak big candle -->
+          <rect x="106" y="52"  width="7" height="115" rx="1" fill="#089981"/><line x1="109.5" y1="38"  x2="109.5" y2="52"  stroke="#089981" stroke-width="1.3"/>
+          <line x1="109.5" y1="167" x2="109.5" y2="182" stroke="#089981" stroke-width="1.3"/>
+          <text x="96" y="30" font-size="8.5" fill="rgba(240,242,255,0.4)" font-family="monospace">High 5,597</text>
+
+          <!-- Phase 2: drop -->
+          <rect x="119" y="194" width="6" height="58"  rx="1" fill="#F23645"/>
+          <rect x="130" y="245" width="6" height="48"  rx="1" fill="#F23645"/>
+          <rect x="141" y="290" width="6" height="52"  rx="1" fill="#F23645"/>
+
+          <!-- SL break line -->
+          <line x1="141" y1="380" x2="420" y2="380" stroke="#F23645" stroke-width="1.2" stroke-dasharray="6 4" opacity=".7"/>
+          <text x="255" y="376" font-size="9" fill="#F23645" font-family="monospace" opacity=".9">Break</text>
+
+          <!-- Long BR entry -->
+          <rect x="152" y="352" width="6" height="28" rx="1" fill="#089981"/>
+          <polygon points="155,408 151,420 159,420" fill="#4F7FFF" opacity=".9"/>
+          <text x="143" y="435" font-size="8" fill="#4F7FFF" font-family="monospace" font-weight="700">Long BR</text>
+          <text x="146" y="445" font-size="8" fill="#22C55E" font-family="monospace">+21.3</text>
+          <!-- TP labels Long BR -->
+          <polygon points="155,305 151,295 159,295" fill="#22C55E" opacity=".85"/>
+          <text x="163" y="299" font-size="8" fill="#22C55E" font-family="monospace">TP1</text>
+          <polygon points="155,264 151,254 159,254" fill="#22C55E" opacity=".9"/>
+          <text x="163" y="258" font-size="8" fill="#22C55E" font-family="monospace">TP2</text>
+          <polygon points="155,220 151,210 159,210" fill="#22C55E"/>
+          <text x="163" y="214" font-size="8" fill="#22C55E" font-family="monospace">TP3</text>
+
+          <!-- Phase 3: bounce + Long BR2 -->
+          <rect x="163" y="330" width="6" height="34" rx="1" fill="#089981"/>
+          <rect x="174" y="312" width="6" height="30" rx="1" fill="#F23645"/>
+          <rect x="185" y="328" width="6" height="26" rx="1" fill="#089981"/>
+          <polygon points="188,390 184,402 192,402" fill="#a78bfa" opacity=".9"/>
+          <text x="178" y="416" font-size="8" fill="#a78bfa" font-family="monospace" font-weight="700">Long BR2</text>
+          <text x="181" y="426" font-size="8" fill="#22C55E" font-family="monospace">+20.3</text>
+
+          <!-- Phase 4: consolidation rally -->
+          <rect x="196" y="295" width="6" height="38" rx="1" fill="#089981"/>
+          <rect x="207" y="278" width="6" height="34" rx="1" fill="#089981"/>
+          <rect x="218" y="292" width="6" height="28" rx="1" fill="#F23645"/>
+          <rect x="229" y="280" width="6" height="30" rx="1" fill="#089981"/>
+          <rect x="240" y="264" width="6" height="28" rx="1" fill="#089981"/>
+          <rect x="251" y="255" width="6" height="26" rx="1" fill="#F23645"/>
+          <rect x="262" y="246" width="6" height="24" rx="1" fill="#089981"/>
+          <rect x="273" y="232" width="6" height="26" rx="1" fill="#089981"/>
+          <rect x="284" y="215" width="6" height="28" rx="1" fill="#F23645"/>
+          <rect x="295" y="205" width="6" height="22" rx="1" fill="#089981"/>
+          <rect x="306" y="192" width="6" height="24" rx="1" fill="#089981"/>
+          <rect x="317" y="178" width="6" height="26" rx="1" fill="#F23645"/>
+          <rect x="328" y="168" width="6" height="22" rx="1" fill="#089981"/>
+          <rect x="339" y="158" width="6" height="20" rx="1" fill="#089981"/>
+          <rect x="350" y="148" width="6" height="22" rx="1" fill="#F23645"/>
+          <rect x="361" y="140" width="6" height="18" rx="1" fill="#089981"/>
+          <rect x="372" y="134" width="6" height="16" rx="1" fill="#F23645"/>
+
+          <!-- SELL BR1 ZONE BOX -->
+          <rect x="383" y="148" width="185" height="55" rx="3" fill="rgba(242,54,69,0.1)" stroke="rgba(242,54,69,0.4)" stroke-width="1.2"/>
+          <text x="430" y="182" font-size="13" fill="rgba(242,54,69,0.55)" font-family="monospace" font-weight="700">SELL BR 1</text>
+          <line x1="568" y1="148" x2="730" y2="148" stroke="#F23645" stroke-width="1" stroke-dasharray="5 3" opacity=".55"/>
+          <line x1="568" y1="203" x2="730" y2="203" stroke="#F23645" stroke-width="1" stroke-dasharray="5 3" opacity=".55"/>
+          <text x="736" y="152" font-size="8.5" fill="#F23645" font-family="monospace">5115.40</text>
+          <text x="736" y="207" font-size="8.5" fill="#F23645" font-family="monospace">4917.32</text>
+
+          <!-- SELL BR2 ZONE BOX -->
+          <rect x="568" y="260" width="130" height="42" rx="3" fill="rgba(242,54,69,0.08)" stroke="rgba(242,54,69,0.3)" stroke-width="1"/>
+          <text x="594" y="286" font-size="11" fill="rgba(242,54,69,0.5)" font-family="monospace" font-weight="700">SELL BR 2</text>
+          <line x1="568" y1="260" x2="730" y2="260" stroke="#F23645" stroke-width="1" stroke-dasharray="4 3" opacity=".45"/>
+          <line x1="568" y1="302" x2="730" y2="302" stroke="#F23645" stroke-width="1" stroke-dasharray="4 3" opacity=".45"/>
+          <text x="736" y="264" font-size="8.5" fill="#F23645" font-family="monospace">4791.86</text>
+          <text x="736" y="306" font-size="8.5" fill="#F23645" font-family="monospace">4725.83</text>
+
+          <!-- candles entering BR1 zone -->
+          <rect x="383" y="151" width="6" height="30" rx="1" fill="#F23645"/>
+          <rect x="394" y="155" width="6" height="25" rx="1" fill="#089981"/>
+          <rect x="405" y="150" width="6" height="28" rx="1" fill="#F23645"/>
+          <rect x="416" y="153" width="6" height="26" rx="1" fill="#F23645"/>
+          <rect x="427" y="158" width="6" height="24" rx="1" fill="#089981"/>
+          <rect x="438" y="152" width="6" height="22" rx="1" fill="#F23645"/>
+          <rect x="449" y="155" width="6" height="24" rx="1" fill="#089981"/>
+          <rect x="460" y="149" width="6" height="25" rx="1" fill="#F23645"/>
+          <rect x="471" y="156" width="6" height="23" rx="1" fill="#089981"/>
+
+          <!-- crash candles -->
+          <rect x="482" y="168" width="7" height="52"  rx="1" fill="#F23645"/>
+          <rect x="494" y="218" width="7" height="66"  rx="1" fill="#F23645"/>
+          <rect x="506" y="280" width="7" height="78"  rx="1" fill="#F23645"/>
+          <rect x="518" y="330" width="7" height="80"  rx="1" fill="#F23645"/><line x1="521.5" y1="316" x2="521.5" y2="330" stroke="#F23645" stroke-width="1.2"/><line x1="521.5" y1="410" x2="521.5" y2="424" stroke="#F23645" stroke-width="1.2"/>
+          <text x="510" y="437" font-size="8.5" fill="rgba(240,242,255,0.35)" font-family="monospace">Low 4,098</text>
+
+          <!-- Short BR2 entry -->
+          <rect x="530" y="265" width="6" height="33" rx="1" fill="#F23645"/>
+          <polygon points="533,238 529,226 537,226" fill="#F23645" opacity=".95"/>
+          <text x="520" y="222" font-size="8.5" fill="#F23645" font-family="monospace" font-weight="700">Short BR2</text>
+          <text x="524" y="213" font-size="8" fill="rgba(242,54,69,0.8)" font-family="monospace">-21.1</text>
+
+          <!-- TP Short BR2 -->
+          <polygon points="533,318 529,330 537,330" fill="#22C55E" opacity=".85"/>
+          <text x="541" y="334" font-size="8" fill="#22C55E" font-family="monospace">TP1 +8.4</text>
+          <polygon points="533,360 529,372 537,372" fill="#22C55E" opacity=".9"/>
+          <text x="541" y="376" font-size="8" fill="#22C55E" font-family="monospace">TP2 +8.4</text>
+          <polygon points="533,398 529,410 537,410" fill="#22C55E"/>
+          <text x="541" y="414" font-size="8" fill="#22C55E" font-family="monospace">TP3 +4.3</text>
+
+          <!-- post entry candles down -->
+          <rect x="541" y="294" width="6" height="44" rx="1" fill="#F23645"/>
+          <rect x="552" y="322" width="6" height="48" rx="1" fill="#F23645"/>
+          <rect x="563" y="350" width="6" height="52" rx="1" fill="#F23645"/>
+          <rect x="574" y="375" width="6" height="46" rx="1" fill="#F23645"/>
+          <rect x="585" y="388" width="6" height="34" rx="1" fill="#089981"/>
+          <rect x="596" y="378" width="6" height="40" rx="1" fill="#F23645"/>
+          <rect x="607" y="390" width="6" height="28" rx="1" fill="#089981"/>
+          <rect x="618" y="380" width="6" height="34" rx="1" fill="#F23645"/>
+          <rect x="629" y="368" width="6" height="30" rx="1" fill="#089981"/>
+          <rect x="640" y="358" width="6" height="26" rx="1" fill="#089981"/>
+          <rect x="651" y="348" width="6" height="24" rx="1" fill="#089981"/>
+
+          <!-- current price -->
+          <line x1="651" y1="348" x2="730" y2="348" stroke="#4F7FFF" stroke-width="1.2" stroke-dasharray="4 2" opacity=".8"/>
+          <rect x="660" y="342" width="58" height="13" rx="3" fill="#4F7FFF"/>
+          <text x="663" y="352" font-size="8.5" fill="white" font-family="monospace" font-weight="700">4,722.24</text>
+
+        </svg>
+
+        <!-- DASHBOARD -->
+        <div class="chart-dashboard">
+          <div class="cd-header">
+            <span class="cd-title">ZONA A1 – STATUS</span>
+            <span class="cd-col ok">LONG</span>
+            <span class="cd-col bad">SHORT</span>
+          </div>
+          <div class="cd-row alt">
+            <span class="cd-label">✔ Trend EMA</span>
+            <span class="cd-val ok">ALLOW ✔</span>
+            <span class="cd-val ok">ALLOW ✔</span>
+          </div>
+          <div class="cd-row">
+            <span class="cd-label">✘ Swing Bias</span>
+            <span class="cd-val bad">BEARISH ✘</span>
+            <span class="cd-val ok">BEARISH ✔</span>
+          </div>
+          <div class="cd-sep">── BR 1 ──</div>
+          <div class="cd-row alt">
+            <span class="cd-label">Zona BR 1 Terbentuk</span>
+            <span class="cd-val bad">NO ✘</span>
+            <span class="cd-val bad">NO ✘</span>
+          </div>
+          <div class="cd-row">
+            <span class="cd-label">Waiting Entry BR 1</span>
+            <span class="cd-val bad">DONE ✘</span>
+            <span class="cd-val ok">WAITING ✔</span>
+          </div>
+          <div class="cd-row alt">
+            <span class="cd-label">➤ ZONA STATUS</span>
+            <span class="cd-status bad">INVALID</span>
+            <span class="cd-status ok">VALID ✔</span>
+          </div>
+          <div class="cd-row fresh-row">
+            <span class="cd-label">◈ Freshness BR 1</span>
+            <span class="cd-fresh invalid">🔴 INVALID</span>
+            <span class="cd-fresh fresh">🟢 FRESH</span>
+          </div>
+          <div class="cd-sep purple-sep">── BR 2 ──</div>
+          <div class="cd-row alt">
+            <span class="cd-label">Zona BR 2 Terbentuk</span>
+            <span class="cd-val bad">NO ✘</span>
+            <span class="cd-val bad">NO ✘</span>
+          </div>
+          <div class="cd-row">
+            <span class="cd-label">Waiting Entry BR 2</span>
+            <span class="cd-val bad">DONE ✘</span>
+            <span class="cd-val bad">DONE ✘</span>
+          </div>
+          <div class="cd-row alt">
+            <span class="cd-label">➤ ZONA STATUS</span>
+            <span class="cd-status bad">INVALID</span>
+            <span class="cd-status bad">INVALID</span>
+          </div>
+          <div class="cd-row fresh-row">
+            <span class="cd-label">◈ Freshness BR 2</span>
+            <span class="cd-fresh invalid">🔴 INVALID</span>
+            <span class="cd-fresh used">🟡 USED</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cf-bottombar">
+        <span class="cf-logo">🔵 TradingView</span>
+        <div class="cf-legend">
+          <span class="cl-item"><span class="cl-box" style="background:rgba(242,54,69,0.25);border:1px solid #F23645;"></span>Zona SELL BR 1</span>
+          <span class="cl-item"><span class="cl-box" style="background:rgba(242,54,69,0.15);border:1px solid rgba(242,54,69,0.4);"></span>Zona SELL BR 2</span>
+          <span class="cl-item"><span style="color:#22C55E;font-size:11px;">▲</span> TP Hit</span>
+          <span class="cl-item"><span style="color:#4F7FFF;font-size:11px;">▲</span> Entry</span>
+          <span class="cl-item"><span style="color:#a78bfa;font-size:11px;">▲</span> Entry BR2</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-callouts r">
+      <div class="callout-item">
+        <div class="coi-icon" style="background:rgba(242,54,69,0.1);border-color:rgba(242,54,69,0.3);">🔴</div>
+        <div><strong>Zona SELL BR 1 &amp; BR 2</strong><p>Otomatis terbentuk setelah Break Low. Harga retrace ke zona → sistem siap SHORT.</p></div>
+      </div>
+      <div class="callout-item">
+        <div class="coi-icon" style="background:rgba(0,207,255,0.1);border-color:rgba(0,207,255,0.3);">📋</div>
+        <div><strong>Dashboard Real-Time</strong><p>Status VALID/INVALID, Freshness FRESH/USED/INVALID, Trend filter — satu tampilan.</p></div>
+      </div>
+      <div class="callout-item">
+        <div class="coi-icon" style="background:rgba(34,197,94,0.1);border-color:rgba(34,197,94,0.3);">🎯</div>
+        <div><strong>TP1 / TP2 / TP3 Otomatis</strong><p>Tiga target profit tergambar di chart. Auto partial close per level tanpa manual.</p></div>
+      </div>
+      <div class="callout-item">
+        <div class="coi-icon" style="background:rgba(245,158,11,0.1);border-color:rgba(245,158,11,0.3);">🔒</div>
+        <div><strong>Auto Break-Even</strong><p>Setelah TP1 hit, SL otomatis geser ke entry. Posisi sisa jadi risk-free.</p></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- STRATEGY FEATURES -->
+<section class="feat-section" id="features">
+  <div class="wrap">
+    <div class="r">
+      <div class="sec-label">Strategy Features</div>
+      <h2 class="sec-h2">Everything Built<br><span>Into the System</span></h2>
+      <p class="sec-p">Every feature listed below is already coded inside the strategy — no extra tools or add-ons required.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card r">
+        <div class="feat-ic ic-blue">🔲</div>
+        <div><h4>BR 1 & BR 2 Zone Detection</h4><p>Detects high-probability rejection zones based on swing structure. BR 1 is the primary zone, BR 2 is the equilibrium fallback. Each zone tracks FRESH / USED / INVALID status in real-time.</p></div>
+      </div>
+      <div class="feat-card r">
+        <div class="feat-ic ic-blue">📐</div>
+        <div><h4>Swing Structure Detection</h4><p>Automatically detects bullish and bearish Break of Structure (BOS/CHoCH) using a configurable swing length. Draws break lines and labels directly on the chart.</p></div>
+      </div>
+      <div class="feat-card r">
+        <div class="feat-ic ic-amber">📡</div>
+        <div><h4>Multi-Timeframe Trend Filter</h4><p>Filters entries using a higher-timeframe MA (EMA, SMA, WMA, or HMA up to 200 period). Blocks counter-trend signals automatically. Configurable timeframe — Daily, Weekly, 4H, 1H.</p></div>
+      </div>
+      <div class="feat-card r">
+        <div class="feat-ic ic-amber">🔒</div>
+        <div><h4>Auto Break-Even After TP1</h4><p>Once TP1 is hit, the SL automatically moves to entry price (with optional buffer %). The remaining position becomes risk-free and rides toward TP2 and TP3.</p></div>
+      </div>
+      <div class="feat-card r">
+        <div class="feat-ic ic-blue">🧭</div>
+        <div><h4>Trade Direction Control</h4><p>Set the EA/strategy to trade Long Only, Short Only, or Both directions. Useful for adapting to specific market conditions or broker restrictions.</p></div>
+      </div>
+      <div class="feat-card r">
+        <div class="feat-ic ic-green">✅</div>
+        <div><h4>Live Hit Detection & Alerts</h4><p>Visual markers appear on-chart when TP1, TP2, TP3, or SL is hit. Background flashes in color. Full alert system for TradingView: TP hits, SL hits, BOS/CHoCH signals, zone entries.</p></div>
+      </div>
+      <div class="feat-card r">
+        <div class="feat-ic ic-amber">📋</div>
+        <div><h4>Live Zone Dashboard</h4><p>On-chart table shows real-time zone status for BR 1 and BR 2 — Trend filter, Swing Bias, Zone validity, Freshness status — for both Long and Short, updated every bar.</p></div>
+      </div>
+      <div class="feat-card r">
+        <div class="feat-ic ic-blue">📏</div>
+        <div><h4>SL/TP Line Visualizer</h4><p>On every new entry, the system draws labeled SL, TP1, TP2, TP3, and Entry lines extending forward on the chart with configurable bar length.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section>
+  <div class="wrap">
+    <div class="r">
+      <div class="sec-label">What You Get</div>
+      <h2 class="sec-h2">Complete Package,<br><span>Ready to Sell</span></h2>
+      <p class="sec-p">Everything delivered in one package — files, documentation, and the rights to resell.</p>
+    </div>
+    <div class="get-grid">
+      <div class="get-item r"><div class="ck">✓</div><div><h4>TradingView Strategy File (Pine Script v5)</h4><p>Rebrand-ready — change name and branding to match your product.</p></div></div>
+      <div class="get-item r"><div class="ck">✓</div><div><h4>MT5 Indicator File (.ex5)</h4><p>Compiled, plug-and-play. No recompiling needed by you or your clients.</p></div></div>
+      <div class="get-item r"><div class="ck">✓</div><div><h4>Expert Advisor MT5 (.ex5)</h4><p>Full auto-trading EA — entries, partial TPs, Break-Even, all automated.</p></div></div>
+      <div class="get-item r"><div class="ck">✓</div><div><h4>Excel License Manager</h4><p>Per-account password system so you control who accesses your product.</p></div></div>
+      <div class="get-item r"><div class="ck">✓</div><div><h4>Full Rebrand Rights</h4><p>Rename, re-logo, and present this as your own trading system — no credits required.</p></div></div>
+      <div class="get-item r"><div class="ck">✓</div><div><h4>Complete User Guide</h4><p>Installation, settings, troubleshooting, and client distribution steps — all documented.</p></div></div>
+      <div class="get-item r"><div class="ck">✓</div><div><h4>Unlimited Resell Accounts</h4><p>Distribute to as many clients as you want with no per-seat restrictions.</p></div></div>
+      <div class="get-item r"><div class="ck">✓</div><div><h4>Free System Updates</h4><p>All bug fixes and improvements during the license period — delivered at no extra cost.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="price-section" id="buy">
+  <div class="wrap" style="text-align:center;">
+    <div class="r">
+      <div class="sec-label" style="text-align:center;">Commercial License</div>
+      <h2 class="sec-h2" style="text-align:center;">One Price.<br><span>Resell Forever.</span></h2>
+    </div>
+    <div class="price-wrap r">
+      <div class="price-card">
+        <div class="pc-top">
+          <div class="pc-label">Rebrand & Reseller License</div>
+          <div class="pc-name">ZONA A1 — Complete Commercial Package</div>
+          <div class="pc-price"><sup>$</sup>500</div>
+          <div class="pc-freq">One-time payment · No subscription · No recurring fees</div>
+        </div>
+        <div class="pc-bot">
+          <ul class="ck-list">
+            <li><div class="c">✓</div>TradingView Strategy — Pine Script v5, rebrand ready</li>
+            <li><div class="c">✓</div>MT5 Indicator (.ex5) — BR 1 + BR 2 zones with Freshness tracking</li>
+            <li><div class="c">✓</div>MT5 Expert Advisor (.ex5)</li>
+            <li><div class="c">✓</div>Auto Break-Even system built-in</li>
+            <li><div class="c">✓</div>Multi-TF trend filter</li>
+            <li><div class="c">✓</div>Full rebrand rights — your name, your logo</li>
+            <li><div class="c">✓</div>Distribute to unlimited client accounts</li>
+            <li><div class="c">✓</div>Complete setup & distribution guide</li>
+            <li><div class="c">✓</div>Free updates during license period</li>
+          </ul>
+          <a href="https://wa.me/6281234567890?text=Hi%2C%20I%27m%20interested%20in%20the%20ZONA%20A1%20%24500%20Commercial%20License." target="_blank" class="pc-cta">
+            Buy Commercial License — $500 →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="wrap">
+    <div class="r" style="text-align:center;">
+      <div class="sec-label" style="text-align:center;">FAQ</div>
+      <h2 class="sec-h2" style="text-align:center;">Common <span>Questions</span></h2>
+    </div>
+    <div class="faq-inner">
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">What is included in the $500 commercial license?<span class="faq-plus">+</span></button><div class="faq-body"><p>You get the full ZONA A1 system — TradingView Pine Script strategy, MT5 Indicator (.ex5), MT5 Expert Advisor (.ex5), Excel-based license manager, complete user guide, full rebrand rights, unlimited resell rights, free updates, and WhatsApp support.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">Can I rename and rebrand the system as my own product?<span class="faq-plus">+</span></button><div class="faq-body"><p>Yes, fully. You can change the product name, logo, and any branding. The watermark in the current version will be replaced with your brand name. No attribution to us is required.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">How does the per-account license protection work?<span class="faq-plus">+</span></button><div class="faq-body"><p>The MT5 files use an account number + password system managed via an Excel file. You enter your client's MT5 account number and the system generates the unlock password. Only authorized accounts can run the EA and indicator.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">How many clients can I sell to?<span class="faq-plus">+</span></button><div class="faq-body"><p>Unlimited. There is no per-seat restriction. You can distribute to as many client accounts as you want using the Excel license manager included in the package.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">What is the BR 1 and BR 2 zone strategy?<span class="faq-plus">+</span></button><div class="faq-body"><p>The system detects swing structure breaks (BOS/CHoCH), then waits for price to retrace into the BR 1 zone (primary rejection area) or the BR 2 zone (equilibrium area) before entering. Entries are filtered by a multi-timeframe MA trend filter. Each zone tracks FRESH/USED/INVALID status.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">Do I need coding skills to use or resell this?<span class="faq-plus">+</span></button><div class="faq-body"><p>No coding required. All files are pre-compiled and ready to use. The included guide covers everything — installation, settings, and distributing to your clients step by step.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">What payment methods are accepted?<span class="faq-plus">+</span></button><div class="faq-body"><p>We accept local bank transfer (BCA, Mandiri), PayPal, and Wise. Contact us via WhatsApp to confirm the best method for your situation before making a payment.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">How quickly are files delivered?<span class="faq-plus">+</span></button><div class="faq-body"><p>Files are delivered within 24 hours of confirmed payment. In most cases delivery happens the same day, often within a few hours after confirmation.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="bottom">
+  <div class="bottom-glow"></div>
+  <h2>Ready to Sell <span class="g">ZONA A1</span><br>Under Your Brand?</h2>
+  <p>$500 once. Full system. Unlimited clients. All revenue is yours.</p>
+  <div style="display:flex;flex-direction:column;align-items:center;gap:20px;">
+    <div class="contact-strip r">
+      <div class="cc"><span class="cc-l">License</span><span class="cc-v">$500 One-Time</span></div>
+      <div class="cc"><span class="cc-l">WhatsApp</span><span class="cc-v"><a href="https://wa.me/6281234567890">+62 812-XXXX-XXXX</a></span></div>
+      <div class="cc"><span class="cc-l">Email</span><span class="cc-v"><a href="mailto:info@mataryclub.com">info@mataryclub.com</a></span></div>
+      <div class="cc"><span class="cc-l">Delivery</span><span class="cc-v">Within 24 Hours</span></div>
+    </div>
+    <a href="https://wa.me/6281234567890?text=Hi%2C%20I%27m%20interested%20in%20the%20ZONA%20A1%20%24500%20Commercial%20License." target="_blank" class="wa-btn r">💬 &nbsp;Chat on WhatsApp Now</a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-logo">ZONA <span>A1</span> — MataryClub</div>
+  <div class="foot-note">© 2025 — Commercial License · Prices subject to change without notice</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

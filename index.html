@@ -1,881 +1,627 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon.png">
-
-  <title>Join Komunitas MATARY</title>
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7NFM4RGX1J"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7NFM4RGX1J');
-</script>
-
-  <!-- GLOBAL NAVBAR -->
-  <link rel="stylesheet" href="assets/main.css">
-
-  <style>
-    /* ===== DARK THEME (SAMA SEPERTI EA) ===== */
-
-    .join-hero{
-      padding:140px 20px 100px;
-      text-align:center;
-    }
-
-    .join-hero h1{
-      font-size:2.6rem;
-      background:linear-gradient(90deg,#60a5fa,#22c55e);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-      margin-bottom:16px;
-    }
-
-    .join-hero p{
-      color:#94a3b8;
-      max-width:700px;
-      margin:auto;
-    }
-
-    .join-section{
-      padding:100px 20px;
-    }
-
-    .join-container{
-      max-width:1100px;
-      margin:auto;
-    }
-
-    .join-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;
-    }
-
-    .join-card{
-      background:linear-gradient(180deg,#020617,#020617);
-      border:1px solid #020617;
-      border-radius:20px;
-      padding:32px;
-      box-shadow:0 30px 60px rgba(0,0,0,.45);
-    }
-
-    .join-card h3{
-      margin-bottom:16px;
-      font-size:1.3rem;
-    }
-
-    .join-card ul{
-      list-style:none;
-      padding:0;
-      color:#cbd5f5;
-    }
-
-    .join-card li{
-      margin-bottom:10px;
-    }
-
-    .step{
-      background:linear-gradient(180deg,#020617,#020617);
-      border-radius:20px;
-      padding:30px;
-      margin-bottom:24px;
-      box-shadow:0 30px 60px rgba(0,0,0,.45);
-    }
-
-    .step strong{
-      color:#60a5fa;
-    }
-
-    .join-cta{
-      text-align:center;
-      padding-bottom:140px;
-    }
-
-    .join-btn{
-      display:inline-block;
-      margin-top:30px;
-      padding:16px 40px;
-      border-radius:999px;
-      background:linear-gradient(90deg,#22c55e,#16a34a);
-      color:#052e16;
-      font-weight:600;
-      text-decoration:none;
-      box-shadow:0 20px 40px rgba(34,197,94,.35);
-    }
-
-
-    /* ===== LOGO ===== */
-    .logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-weight:700;
-  letter-spacing:1px;
-}
-
-.logo img{
-  height:36px;       /* atur tinggi logo */
-  width:auto;
-  display:block;
-}
-
-
-    /* ===== HIGHLIGHT JOIN SECTION ===== */
-.join-highlight{
-  margin-top:80px;
-  padding:60px;
-  border-radius:36px;
-  background:
-    radial-gradient(circle at top,
-      rgba(34,197,94,.12),
-      rgba(2,6,23,.95)
-    );
-  border:1px solid rgba(34,197,94,.35);
-  box-shadow:
-    0 40px 120px rgba(0,0,0,.9),
-    inset 0 0 80px rgba(34,197,94,.12);
-}
-
-.join-highlight .join-card{
-  background:
-    linear-gradient(
-      180deg,
-      rgba(2,6,23,.85),
-      rgba(2,6,23,.98)
-    );
-  border-radius:24px;
-  padding:36px;
-  box-shadow:
-    0 25px 80px rgba(0,0,0,.7);
-  transition:.3s ease;
-}
-
-.join-highlight .join-card:hover{
-  transform:translateY(-6px);
-  box-shadow:
-    0 40px 120px rgba(0,0,0,.9),
-    0 0 40px rgba(34,197,94,.25);
-}
-
-/* LEFT (NEGATIVE) */
-.join-card.bad{
-  border:1px solid rgba(239,68,68,.45);
-}
-.join-card.bad h3{
-  color:#ef4444;
-}
-
-/* RIGHT (POSITIVE) */
-.join-card.good{
-  border:1px solid rgba(34,197,94,.55);
-}
-.join-card.good h3{
-  color:#22c55e;
-}
-
-/* CHECKLIST */
-.join-card ul li{
-  margin-bottom:12px;
-  font-size:1rem;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .join-highlight{
-    padding:32px 20px;
-  }
-}
-
-/* ===== HIGHLIGHT JOIN STEPS ===== */
-.join-steps{
-  margin-top:80px;
-  padding:60px;
-  border-radius:36px;
-  background:
-    radial-gradient(circle at top,
-      rgba(59,130,246,.18),
-      rgba(2,6,23,.96)
-    );
-  border:1px solid rgba(59,130,246,.35);
-  box-shadow:
-    0 40px 120px rgba(0,0,0,.9),
-    inset 0 0 80px rgba(59,130,246,.15);
-}
-
-.step{
-  display:flex;
-  gap:24px;
-  align-items:flex-start;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(2,6,23,.85),
-      rgba(2,6,23,.98)
-    );
-  padding:28px 32px;
-  border-radius:22px;
-  margin-bottom:26px;
-  border:1px solid rgba(148,163,184,.25);
-  box-shadow:0 25px 80px rgba(0,0,0,.65);
-  transition:.3s ease;
-}
-
-.step:hover{
-  transform:translateY(-4px);
-  box-shadow:
-    0 40px 120px rgba(0,0,0,.9),
-    0 0 40px rgba(59,130,246,.25);
-}
-
-.step-number{
-  min-width:46px;
-  height:46px;
-  border-radius:14px;
-  background:linear-gradient(135deg,#3b82f6,#22c55e);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:700;
-  color:#020617;
-  box-shadow:0 0 20px rgba(59,130,246,.7);
-}
-
-.step-content h4{
-  margin-bottom:6px;
-  font-size:1.1rem;
-  color:#e5e7eb;
-}
-
-.step-content p{
-  color:#cbd5f5;
-  margin:0;
-}
-
-.step-content a{
-  color:#60a5fa;
-  font-weight:600;
-  text-decoration:none;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .join-steps{
-    padding:32px 20px;
-  }
-  .step{
-    flex-direction:column;
-  }
-}
-
-.logo img {
-  height: 36px;
-  width: auto;
-  display: block;
-}
-
-/* TESTI */
-.testimoni-section {
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.testimoni-section h2 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-}
-
-.testimoni-section .subtext {
-  color: #94a3b8;
-  margin-bottom: 50px;
-}
-
-.testimoni-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-  align-items: start;
-}
-
-.testimoni-card {
-  flex: 0 0 auto;
-  width: 260px;              /* 🔥 lebih kecil & rapi */
-  height: 520px;             /* 🔥 tinggi dikunci */
-  background: rgba(255,255,255,0.04);
-  border-radius: 18px;
-  padding: 12px;
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-}
-
-
-.testimoni-card img {
-  width: 100%;
-  border-radius: 14px;
-  margin-bottom: 15px;
-  cursor: pointer;
-  transition: transform .3s ease;
-}
-
-.testimoni-card img:hover {
-  transform: scale(1.03);
-}
-
-.testimoni-card p {
-  color: #e5e7eb;
-  font-size: 0.95rem;
-}
-
-.testimoni-scroll {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding: 24px 4px 40px;
-  scroll-snap-type: x mandatory;
-}
-
-.testimoni-scroll::-webkit-scrollbar {
-  height: 6px;
-}
-
-.testimoni-scroll::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.15);
-  border-radius: 10px;
-}
-
-/* CARD */
-.testimoni-card {
-  flex: 0 0 auto;            /* 🔥 JANGAN MENYEMPIT */
-  width: 280px;              /* 🔥 UKURAN AMAN */
-  scroll-snap-align: start;
-  background: rgba(255,255,255,0.03);
-  border-radius: 18px;
-  padding: 12px;
-}
-
-.testimoni-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 14px;
-}
-
-.testimoni-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 80px 24px;
-}
-
-/* DISCLAIMER POPUP */
-.disclaimer-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  backdrop-filter: blur(6px);
-}
-
-.disclaimer-box {
-  background: linear-gradient(180deg, #020617, #000);
-  border: 1px solid rgba(34,197,94,0.3);
-  border-radius: 16px;
-  max-width: 480px;
-  padding: 28px;
-  color: #e5e7eb;
-  box-shadow: 0 30px 80px rgba(0,0,0,.6);
-}
-
-.disclaimer-box h3 {
-  color: #22c55e;
-  margin-bottom: 12px;
-}
-
-.disclaimer-box ul {
-  margin: 16px 0;
-  padding-left: 18px;
-}
-
-.disclaimer-box li {
-  margin-bottom: 6px;
-}
-
-.disclaimer-box .small {
-  font-size: 13px;
-  color: #94a3b8;
-  margin-bottom: 20px;
-}
-
-.disclaimer-box button {
-  width: 100%;
-  padding: 14px;
-  border-radius: 999px;
-  border: none;
-  background: linear-gradient(90deg,#22c55e,#16a34a);
-  color: #052e16;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.disclaimer-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.disclaimer-box {
-  max-width: 420px;
-  background: #0b1220;
-  border-radius: 16px;
-  padding: 24px;
-  color: #e5e7eb;
-  border: 1px solid #22c55e;
-}
-
-.agree-btn {
-  margin-top: 20px;
-  width: 100%;
-  padding: 14px;
-  background: #22c55e;
-  color: #000;
-  border: none;
-  border-radius: 999px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.disclaimer-warning{
-  margin-top:16px;
-  padding:14px;
-  background:rgba(245,158,11,0.08);
-  border:1px dashed rgba(245,158,11,0.5);
-  color:#fde68a;
-  font-size:13px;
-  line-height:1.6;
-  border-radius:10px;
-}
-
-/* =========================
-   DISCLAIMER OVERLAY
-========================= */
-.disclaimer-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-/* =========================
-   DISCLAIMER BOX (DESKTOP)
-========================= */
-.disclaimer-box {
-  background: #0b1220;
-  border: 1px solid #22c55e;
-  border-radius: 20px;
-  padding: 28px;
-  width: 100%;
-  max-width: 420px;
-  color: #e5e7eb;
-  box-shadow: 0 0 40px rgba(34,197,94,0.25);
-}
-
-/* Judul */
-.disclaimer-box h3 {
-  font-size: 18px;
-  color: #22c55e;
-  margin-bottom: 12px;
-}
-
-/* Paragraf */
-.disclaimer-box p {
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-
-/* List */
-.disclaimer-box ul {
-  padding-left: 18px;
-  margin-bottom: 14px;
-}
-
-.disclaimer-box ul li {
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-
-/* Warning box */
-.disclaimer-warning {
-  background: rgba(245, 158, 11, 0.12);
-  border: 1px dashed #f59e0b;
-  border-radius: 12px;
-  padding: 12px;
-  font-size: 13px;
-  color: #fde68a;
-  margin: 14px 0;
-}
-
-/* Tombol */
-.agree-btn {
-  width: 100%;
-  background: #22c55e;
-  color: #052e16;
-  border: none;
-  border-radius: 999px;
-  padding: 14px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.agree-btn:hover {
-  background: #16a34a;
-}
-
-/* =========================
-   MOBILE OPTIMIZATION
-========================= */
-@media (max-width: 768px) {
-
-  .disclaimer-box {
-    max-width: 92%;
-    padding: 18px 16px;
-    border-radius: 16px;
-    max-height: 85vh;
-    overflow-y: auto;
-  }
-
-  .disclaimer-box h3 {
-    font-size: 16px;
-  }
-
-  .disclaimer-box p,
-  .disclaimer-box ul li {
-    font-size: 13px;
-  }
-
-  .disclaimer-warning {
-    font-size: 12px;
-    padding: 10px;
-  }
-
-  .agree-btn {
-    font-size: 14px;
-    padding: 12px;
-  }
-}
-
-/* ===== HAMBURGER MENU ===== */
-.menu-toggle{
-  display:none;
-  font-size:26px;
-  background:none;
-  border:none;
-  color:#22c55e;
-  cursor:pointer;
-  position: relative;
-  z-index: 10000;
-}
-
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px){
-
-  .nav-container{
-    flex-wrap: wrap;
-  }
-
-  .menu-toggle{
-    display:block;
-  }
-
-  .nav-menu{
-    display:none;
-    width:100%;
-    flex-direction:column;
-    text-align:center;
-    margin-top:12px;
-    gap:12px;
-  }
-
-  .nav-menu.active{
-    display:flex;
-  }
-
-  .nav-menu a{
-    padding:10px;
-    font-size:14px;
-  }
-  
-  .navbar{
-  position: sticky;
-  top: 0;
-  z-index: 9999; /* PENTING */
-}
-
-}
-
-
-
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZONA A1 — Commercial License</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
-
-<!-- DISCLAIMER POPUP -->
-<div id="disclaimerOverlay" class="disclaimer-overlay">
-  <div class="disclaimer-box">
-    <h3>⚠️ Disclaimer Komunitas MATARY</h3>
-
-    <p>
-      <strong>EA MATARY & Komunitas MATARY bersifat 100% GRATIS.</strong>
-    </p>
-
-    <ul>
-      <li>❌ Tidak ada kelas berbayar</li>
-      <li>❌ Tidak ada mentoring berbayar</li>
-      <li>❌ Tidak ada titip dana / pengelolaan dana</li>
-      <li>❌ Tidak ada penjualan sinyal trading</li>
-      <li>❌ Tidak menjanjikan profit instan</li>
-    </ul>
-
-    <p>
-      Komunitas MATARY adalah <strong>wadah diskusi & sharing</strong>
-      antar trader untuk belajar disiplin, manajemen risiko,
-      dan eksekusi trading berbasis rule.
-    </p>
-
-    <div class="disclaimer-warning">
-  ⚠️ Trading mengandung risiko. Seluruh keputusan trading berada di tangan masing-masing individu.
-</div>
-
-
-
-    <button id="agreeBtn" class="agree-btn">
-      Saya Mengerti & Lanjutkan
-    </button>
-  </div>
-</div>
-
-<script>
-  const overlay = document.getElementById("disclaimerOverlay");
-  const agreeBtn = document.getElementById("agreeBtn");
-
-  agreeBtn.addEventListener("click", function () {
-    overlay.style.display = "none";
-  });
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.getElementById("menuToggle");
-  const navMenu = document.getElementById("navMenu");
-
-  if(menuToggle && navMenu){
-    menuToggle.addEventListener("click", function () {
-      navMenu.classList.toggle("active");
-    });
-  }
-});
-</script>
-
-
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-container">
-
-    <!-- LOGO -->
-    <a href="/" class="logo">
-      <img src="assets/img/logo-matary.png" alt="MATARY Logo">
-    </a>
-    <button class="menu-toggle" id="menuToggle">☰</button>
-    <!-- MENU -->
-    <ul class="nav-menu" id="navMenu">
-  <li><a href="/" class="active">JOIN MATARY</a></li>
-  <li><a href="/ea-harian.html">EA HARIAN</a></li>
-  <li><a href="/ea-longterm.html">EA LONG-TERM</a></li>
-</ul>
+<!-- NAV -->
+<nav>
+  <div class="logo"><a href="index.html">ZONA <span class="a1">A1</span></a></div>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link active">Home</a>
+    <a href="panduan.html" class="nav-link">Panduan</a>
+    <a href="#buy" class="nav-btn">Get License — $500</a>
   </div>
 </nav>
 
-
-
 <!-- HERO -->
-<section class="join-hero">
-  <h1>Join Komunitas MATARY</h1>
-  <p>
-    Akses group diskusi trading, edukasi, dan tools pendukung  
-    untuk trader yang ingin belajar & berkembang bersama.
-  </p>
+<section class="hero">
+  <div class="orb"></div>
+  <div class="orb2"></div>
+  <div class="hero-content">
+    <div class="chip"><span class="chip-dot"></span>Commercial License — Build Your Community With This System</div>
+    <h1>ZONA <span class="g">A1</span><br>Trading System</h1>
+    <p class="hero-sub">A complete 3-in-1 algorithmic trading system — TradingView Strategy, MT5 Indicator &amp; Expert Advisor. Proven by 1,000+ traders.</p>
+
+    <div class="free-highlight">
+      Start with free community access.<br>
+      Upgrade to unlock full system, automation, and commercial rights.
+    </div>
+    <p class="price-note">One-Time · Full Rebrand Rights · Updates Included</p>
+
+    <div class="btns">
+      <a href="#buy" class="btn-main">Get Commercial License</a>
+      <a href="panduan.html" class="btn-ghost">Lihat Panduan</a>
+    </div>
+
+    <div class="trust r">
+      <div class="t-item"><span class="t-num">1,000+</span><span class="t-label">Active Traders</span></div>
+      <div class="t-item"><span class="t-num">3-in-1</span><span class="t-label">Integrated Tools</span></div>
+      <div class="t-item"><span class="t-num">Auto</span><span class="t-label">Trade System</span></div>
+      <div class="t-item"><span class="t-num">Full</span><span class="t-label">Source Code</span></div>
+    </div>
+  </div>
 </section>
 
-<!-- BENEFIT -->
-<section class="join-section">
-  <div class="join-container join-highlight">
+<!-- 3 TOOLS -->
+<section class="tools-section">
+  <div class="wrap">
+    <div class="r" style="max-width:700px;">
+      <div class="sec-label">The Core System</div>
+      <h2 class="sec-h2">Three Tools,<br><span>One Strategy Logic</span></h2>
+      <p class="sec-p" style="max-width:600px;">Semua platform, satu logika. TradingView untuk analisis &amp; backtest, MT5 untuk trading live, EA untuk full otomasi — semuanya berjalan di atas engine Block Rejection yang sama.</p>
+    </div>
 
-    <div class="join-grid">
+    <div class="tools-grid r">
 
-      <div class="join-card bad">
-        <h3>❌ GAK PAKE BAYAR-BAYAR!</h3>
-        <ul>
-          <li>✖ Tidak Bayar</li>
-          <li>✖ Tidak ada Minimal deposit</li>
-          <li>✖ Tidak ada Langganan</li>
+      <!-- TRADINGVIEW -->
+      <div class="tool-card tc-tv">
+        <div class="tool-illus">
+          <svg viewBox="0 0 280 140" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block;">
+            <line x1="0" y1="30"  x2="280" y2="30"  stroke="rgba(79,127,255,0.1)" stroke-width="1"/>
+            <line x1="0" y1="60"  x2="280" y2="60"  stroke="rgba(79,127,255,0.1)" stroke-width="1"/>
+            <line x1="0" y1="90"  x2="280" y2="90"  stroke="rgba(79,127,255,0.1)" stroke-width="1"/>
+            <line x1="0" y1="120" x2="280" y2="120" stroke="rgba(79,127,255,0.1)" stroke-width="1"/>
+            <line x1="40"  y1="0" x2="40"  y2="140" stroke="rgba(79,127,255,0.06)" stroke-width="1"/>
+            <line x1="100" y1="0" x2="100" y2="140" stroke="rgba(79,127,255,0.06)" stroke-width="1"/>
+            <line x1="160" y1="0" x2="160" y2="140" stroke="rgba(79,127,255,0.06)" stroke-width="1"/>
+            <line x1="220" y1="0" x2="220" y2="140" stroke="rgba(79,127,255,0.06)" stroke-width="1"/>
+            <rect x="14" y="50" width="12" height="28" rx="2" fill="#F23645" opacity=".85"/>
+            <line x1="20" y1="44" x2="20" y2="50" stroke="#F23645" stroke-width="1.5"/>
+            <line x1="20" y1="78" x2="20" y2="84" stroke="#F23645" stroke-width="1.5"/>
+            <rect x="34" y="58" width="12" height="32" rx="2" fill="#F23645" opacity=".85"/>
+            <line x1="40" y1="52" x2="40" y2="58" stroke="#F23645" stroke-width="1.5"/>
+            <line x1="40" y1="90" x2="40" y2="96" stroke="#F23645" stroke-width="1.5"/>
+            <line x1="50" y1="50" x2="50" y2="140" stroke="#4F7FFF" stroke-width="1" stroke-dasharray="3 2" opacity=".5"/>
+            <text x="53" y="46" font-size="8" fill="#4F7FFF" font-family="monospace" opacity=".9">BREAK</text>
+            <rect x="55" y="72" width="90" height="22" rx="3" fill="rgba(79,127,255,0.12)" stroke="#4F7FFF" stroke-width="1" stroke-dasharray="3 2"/>
+            <text x="59" y="87" font-size="7.5" fill="#4F7FFF" font-family="monospace" font-weight="700">BUY BR 1</text>
+            <rect x="55" y="96" width="90" height="18" rx="3" fill="rgba(167,139,250,0.1)" stroke="#a78bfa" stroke-width="1" stroke-dasharray="3 2"/>
+            <text x="59" y="109" font-size="7.5" fill="#a78bfa" font-family="monospace" font-weight="700">BUY BR 2</text>
+            <rect x="60" y="78" width="12" height="16" rx="2" fill="#089981" opacity=".9"/>
+            <line x1="66" y1="72" x2="66" y2="78" stroke="#089981" stroke-width="1.5"/>
+            <line x1="66" y1="94" x2="66" y2="100" stroke="#089981" stroke-width="1.5"/>
+            <rect x="80" y="68" width="12" height="18" rx="2" fill="#089981" opacity=".9"/>
+            <line x1="86" y1="62" x2="86" y2="68" stroke="#089981" stroke-width="1.5"/>
+            <line x1="86" y1="86" x2="86" y2="92" stroke="#089981" stroke-width="1.5"/>
+            <polygon points="106,83 116,78 116,88" fill="#00CFFF" opacity=".9"/>
+            <line x1="118" y1="65" x2="270" y2="65" stroke="#22C55E" stroke-width="1" stroke-dasharray="4 3"/>
+            <line x1="118" y1="50" x2="270" y2="50" stroke="#22C55E" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="118" y1="36" x2="270" y2="36" stroke="#22C55E" stroke-width="2" opacity=".9"/>
+            <line x1="118" y1="115" x2="270" y2="115" stroke="#F23645" stroke-width="1" stroke-dasharray="4 3" opacity=".7"/>
+            <text x="235" y="62" font-size="8" fill="#22C55E" font-family="monospace">TP1</text>
+            <text x="235" y="47" font-size="8" fill="#22C55E" font-family="monospace">TP2</text>
+            <text x="235" y="33" font-size="8" fill="#22C55E" font-family="monospace">TP3</text>
+            <text x="237" y="112" font-size="8" fill="#F23645" font-family="monospace" opacity=".8">SL</text>
+            <rect x="122" y="55" width="10" height="18" rx="2" fill="#089981" opacity=".9"/>
+            <rect x="138" y="44" width="10" height="20" rx="2" fill="#089981" opacity=".9"/>
+            <rect x="154" y="34" width="10" height="18" rx="2" fill="#089981" opacity=".9"/>
+            <rect x="170" y="28" width="10" height="14" rx="2" fill="#089981" opacity=".85"/>
+            <rect x="195" y="58" width="28" height="14" rx="4" fill="rgba(0,207,255,0.15)" stroke="#00CFFF" stroke-width="0.8"/>
+            <text x="198" y="69" font-size="7" fill="#00CFFF" font-family="monospace">🔒 BE</text>
+          </svg>
+        </div>
+        <div class="tool-sub">Platform · TradingView</div>
+        <h3>Strategy Pine Script</h3>
+        <p>Engine utama sistem. Full backtest, auto-deteksi swing structure, plot zona BR 1 &amp; BR 2 secara real-time, sinyal entry lengkap dengan garis SL/TP di chart.</p>
+        <ul class="tool-features">
+          <li><span class="tf-dot tf-dot-b"></span>Auto-deteksi Break of Structure (BOS/CHoCH)</li>
+          <li><span class="tf-dot tf-dot-b"></span>Plot zona BR 1 &amp; BR 2 otomatis setelah break</li>
+          <li><span class="tf-dot tf-dot-b"></span>Dashboard status FRESH / USED / INVALID</li>
+          <li><span class="tf-dot tf-dot-b"></span>Multi-TF trend filter + SL/TP visualizer</li>
+          <li><span class="tf-dot tf-dot-b"></span>Alert TP1, TP2, TP3, SL, BOS/CHoCH</li>
         </ul>
+        <span class="tool-badge tb-b">Pine Script v5 · Open Source</span>
       </div>
 
-      <div class="join-card good">
-        <h3>✅ Semua Gratis!</h3>
-        <ul>
-          <li>✔ Gratis join komunitas</li>
-          <li>✔ Tidak ada minimum deposit</li>
-          <li>✔ Bebas keluar masuk</li>
-          <li>✔ Cocok pemula & trader lama</li>
-          <li>✔ Full akses diskusi</li>
-          <li>✔ Gratis EA </li>
+      <!-- MT5 INDICATOR -->
+      <div class="tool-card tc-mt5">
+        <div class="tool-illus">
+          <svg viewBox="0 0 280 140" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block;">
+            <rect x="8" y="8" width="264" height="124" rx="6" fill="rgba(0,207,255,0.04)" stroke="rgba(0,207,255,0.15)" stroke-width="1"/>
+            <rect x="8" y="8" width="264" height="18" rx="6" fill="rgba(0,207,255,0.08)"/>
+            <rect x="8" y="20" width="264" height="6" fill="rgba(0,207,255,0.08)"/>
+            <circle cx="20" cy="17" r="3" fill="rgba(242,54,69,0.5)"/>
+            <circle cx="30" cy="17" r="3" fill="rgba(245,158,11,0.5)"/>
+            <circle cx="40" cy="17" r="3" fill="rgba(34,197,94,0.5)"/>
+            <text x="110" y="20" font-size="7" fill="rgba(0,207,255,0.6)" font-family="monospace" text-anchor="middle">ZONA A1 · MetaTrader 5</text>
+            <line x1="8" y1="55" x2="272" y2="55" stroke="rgba(0,207,255,0.07)" stroke-width="1"/>
+            <line x1="8" y1="80" x2="272" y2="80" stroke="rgba(0,207,255,0.07)" stroke-width="1"/>
+            <line x1="8" y1="105" x2="272" y2="105" stroke="rgba(0,207,255,0.07)" stroke-width="1"/>
+            <path d="M12,118 C50,115 80,105 110,95 C140,85 170,72 260,55" fill="none" stroke="#F59E0B" stroke-width="1.5" opacity=".7"/>
+            <rect x="60" y="70" width="148" height="18" rx="3" fill="rgba(0,207,255,0.08)" stroke="rgba(0,207,255,0.3)" stroke-width="1"/>
+            <text x="65" y="83" font-size="7.5" fill="#00CFFF" font-family="monospace" font-weight="700">SELL BR 1</text>
+            <rect x="18" y="50" width="8" height="22" rx="1.5" fill="#089981" opacity=".85"/>
+            <line x1="22" y1="44" x2="22" y2="50" stroke="#089981" stroke-width="1.5"/>
+            <rect x="30" y="44" width="8" height="20" rx="1.5" fill="#089981" opacity=".85"/>
+            <line x1="34" y1="38" x2="34" y2="44" stroke="#089981" stroke-width="1.5"/>
+            <line x1="44" y1="36" x2="44" y2="132" stroke="#F23645" stroke-width="1" stroke-dasharray="3 2" opacity=".6"/>
+            <text x="46" y="34" font-size="7" fill="#F23645" font-family="monospace">BREAK</text>
+            <rect x="50" y="68" width="8" height="20" rx="1.5" fill="#F23645" opacity=".9"/>
+            <line x1="54" y1="62" x2="54" y2="68" stroke="#F23645" stroke-width="1.5"/>
+            <rect x="64" y="93" width="52" height="16" rx="4" fill="rgba(242,54,69,0.15)" stroke="rgba(242,54,69,0.35)" stroke-width="0.8"/>
+            <text x="68" y="104" font-size="8" fill="#F23645" font-family="monospace" font-weight="700">▼ SELL</text>
+            <rect x="82"  y="74" width="8" height="22" rx="1.5" fill="#F23645" opacity=".9"/>
+            <rect x="96"  y="82" width="8" height="26" rx="1.5" fill="#F23645" opacity=".9"/>
+            <rect x="110" y="90" width="8" height="28" rx="1.5" fill="#F23645" opacity=".85"/>
+            <rect x="124" y="96" width="8" height="24" rx="1.5" fill="#F23645" opacity=".85"/>
+            <rect x="178" y="32" width="86" height="90" rx="5" fill="rgba(6,8,17,0.8)" stroke="rgba(0,207,255,0.2)" stroke-width="1"/>
+            <text x="184" y="44" font-size="7" fill="rgba(0,207,255,0.7)" font-family="monospace">ZONA A1 STATUS</text>
+            <line x1="180" y1="47" x2="262" y2="47" stroke="rgba(0,207,255,0.15)" stroke-width=".8"/>
+            <text x="184" y="58" font-size="6.5" fill="rgba(240,242,255,0.4)" font-family="monospace">Trend EMA</text>
+            <text x="230" y="58" font-size="6.5" fill="#F23645" font-family="monospace">BLOCK ✘</text>
+            <text x="184" y="69" font-size="6.5" fill="rgba(240,242,255,0.4)" font-family="monospace">Swing Bias</text>
+            <text x="228" y="69" font-size="6.5" fill="#F23645" font-family="monospace">BEARISH</text>
+            <text x="184" y="80" font-size="6.5" fill="rgba(240,242,255,0.4)" font-family="monospace">Zona BR 1</text>
+            <rect x="224" y="73" width="32" height="10" rx="2" fill="rgba(34,197,94,0.15)"/>
+            <text x="228" y="80" font-size="6.5" fill="#22C55E" font-family="monospace">VALID ✔</text>
+            <text x="184" y="91" font-size="6.5" fill="rgba(240,242,255,0.4)" font-family="monospace">Freshness</text>
+            <rect x="218" y="84" width="38" height="10" rx="2" fill="rgba(34,197,94,0.12)"/>
+            <text x="221" y="91" font-size="6.5" fill="#22C55E" font-family="monospace">🟢 FRESH</text>
+            <line x1="180" y1="95" x2="262" y2="95" stroke="rgba(0,207,255,0.12)" stroke-width=".8"/>
+            <text x="184" y="106" font-size="6" fill="rgba(240,242,255,0.25)" font-family="monospace">➤ SHORT STATUS</text>
+            <rect x="218" y="100" width="38" height="10" rx="2" fill="rgba(34,197,94,0.2)"/>
+            <text x="222" y="107" font-size="6.5" fill="#22C55E" font-family="monospace" font-weight="700">VALID ✔</text>
+          </svg>
+        </div>
+        <div class="tool-sub">Platform · MetaTrader 5</div>
+        <h3>MT5 Custom Indicator</h3>
+        <p>Logika zona yang sama, langsung di MetaTrader 5. Tampilkan BR 1 &amp; BR 2, trend MA, dan sinyal entry secara live — tanpa berpindah platform saat trading.</p>
+        <ul class="tool-features">
+          <li><span class="tf-dot"></span>Zona BR 1 &amp; BR 2 otomatis di MT5 chart</li>
+          <li><span class="tf-dot"></span>Visual area entry langsung di chart</li>
+          <li><span class="tf-dot"></span>Ringan &amp; real-time tanpa delay</li>
+          <li><span class="tf-dot"></span>Kompatibel dengan semua broker MT5</li>
+          <li><span class="tf-dot"></span>Protected per account number</li>
         </ul>
+        <span class="tool-badge">MQL5 · MT5 · .ex5</span>
       </div>
 
+      <!-- EA -->
+      <div class="tool-card tc-ea">
+        <div class="tool-illus">
+          <svg viewBox="0 0 280 140" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block;">
+            <rect x="8" y="8" width="264" height="124" rx="6" fill="rgba(34,197,94,0.03)" stroke="rgba(34,197,94,0.1)" stroke-width="1"/>
+            <rect x="14" y="20" width="72" height="28" rx="6" fill="rgba(34,197,94,0.1)" stroke="rgba(34,197,94,0.3)" stroke-width="1"/>
+            <text x="50" y="32" font-size="7.5" fill="#22C55E" font-family="monospace" text-anchor="middle" font-weight="700">Detect Zone</text>
+            <text x="50" y="43" font-size="6.5" fill="rgba(34,197,94,0.6)" font-family="monospace" text-anchor="middle">BR 1 / BR 2</text>
+            <line x1="86" y1="34" x2="100" y2="34" stroke="rgba(34,197,94,0.4)" stroke-width="1.5" marker-end="url(#arr-g)"/>
+            <rect x="100" y="20" width="72" height="28" rx="6" fill="rgba(0,207,255,0.08)" stroke="rgba(0,207,255,0.25)" stroke-width="1"/>
+            <text x="136" y="32" font-size="7.5" fill="#00CFFF" font-family="monospace" text-anchor="middle" font-weight="700">Check Valid</text>
+            <text x="136" y="43" font-size="6.5" fill="rgba(0,207,255,0.6)" font-family="monospace" text-anchor="middle">Trend + Fresh</text>
+            <line x1="172" y1="34" x2="186" y2="34" stroke="rgba(0,207,255,0.4)" stroke-width="1.5" marker-end="url(#arr-c)"/>
+            <rect x="186" y="20" width="80" height="28" rx="6" fill="rgba(79,127,255,0.1)" stroke="rgba(79,127,255,0.3)" stroke-width="1"/>
+            <text x="226" y="32" font-size="7.5" fill="#4F7FFF" font-family="monospace" text-anchor="middle" font-weight="700">Auto Entry</text>
+            <text x="226" y="43" font-size="6.5" fill="rgba(79,127,255,0.6)" font-family="monospace" text-anchor="middle">Buy / Sell</text>
+            <line x1="226" y1="48" x2="226" y2="62" stroke="rgba(79,127,255,0.4)" stroke-width="1.5" marker-end="url(#arr-b)"/>
+            <rect x="158" y="62" width="52" height="24" rx="5" fill="rgba(34,197,94,0.08)" stroke="rgba(34,197,94,0.25)" stroke-width="1"/>
+            <text x="184" y="73" font-size="7" fill="#22C55E" font-family="monospace" text-anchor="middle">TP1 40%</text>
+            <text x="184" y="82" font-size="6" fill="rgba(34,197,94,0.5)" font-family="monospace" text-anchor="middle">partial close</text>
+            <rect x="218" y="62" width="52" height="24" rx="5" fill="rgba(34,197,94,0.08)" stroke="rgba(34,197,94,0.25)" stroke-width="1"/>
+            <text x="244" y="73" font-size="7" fill="#22C55E" font-family="monospace" text-anchor="middle">TP2 40%</text>
+            <text x="244" y="82" font-size="6" fill="rgba(34,197,94,0.5)" font-family="monospace" text-anchor="middle">partial close</text>
+            <line x1="226" y1="86" x2="226" y2="98" stroke="rgba(34,197,94,0.35)" stroke-width="1.5" marker-end="url(#arr-g)"/>
+            <rect x="158" y="98" width="112" height="24" rx="5" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.25)" stroke-width="1"/>
+            <text x="214" y="109" font-size="7.5" fill="#F59E0B" font-family="monospace" text-anchor="middle" font-weight="700">🔒 Auto Break-Even</text>
+            <text x="214" y="118" font-size="6" fill="rgba(245,158,11,0.55)" font-family="monospace" text-anchor="middle">SL moves to entry after TP1</text>
+            <rect x="14" y="56" width="128" height="72" rx="6" fill="rgba(6,8,17,0.7)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+            <text x="20" y="68" font-size="6.5" fill="rgba(240,242,255,0.35)" font-family="monospace">TRADE LOG</text>
+            <line x1="14" y1="70" x2="142" y2="70" stroke="rgba(255,255,255,0.05)" stroke-width=".8"/>
+            <circle cx="22" cy="80" r="3" fill="rgba(34,197,94,0.5)"/>
+            <text x="28" y="83" font-size="7" fill="rgba(240,242,255,0.55)" font-family="monospace">BUY BR1 — Entry 1.0842</text>
+            <circle cx="22" cy="92" r="3" fill="rgba(0,207,255,0.5)"/>
+            <text x="28" y="95" font-size="7" fill="rgba(240,242,255,0.55)" font-family="monospace">TP1 Hit → BE Active 🔒</text>
+            <circle cx="22" cy="104" r="3" fill="rgba(34,197,94,0.5)"/>
+            <text x="28" y="107" font-size="7" fill="rgba(240,242,255,0.55)" font-family="monospace">TP2 Hit → Partial Close</text>
+            <circle cx="22" cy="116" r="3" fill="rgba(255,214,0,0.6)"/>
+            <text x="28" y="119" font-size="7" fill="#FFD600" font-family="monospace">TP3 Hit 🏆 Full Profit</text>
+            <defs>
+              <marker id="arr-g" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L7 4L1 7" fill="none" stroke="rgba(34,197,94,0.6)" stroke-width="1.5"/></marker>
+              <marker id="arr-c" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L7 4L1 7" fill="none" stroke="rgba(0,207,255,0.6)" stroke-width="1.5"/></marker>
+              <marker id="arr-b" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L7 4L1 7" fill="none" stroke="rgba(79,127,255,0.6)" stroke-width="1.5"/></marker>
+            </defs>
+          </svg>
+        </div>
+        <div class="tool-sub">Automation · MetaTrader 5</div>
+        <h3>Expert Advisor (EA)</h3>
+        <p>Trading otomatis berbasis zona dengan manajemen posisi fleksibel. EA membuka posisi saat harga masuk zona dan mengelola trade secara otomatis tanpa perlu monitoring terus-menerus.</p>
+        <ul class="tool-features">
+          <li><span class="tf-dot tf-dot-g"></span>Entry otomatis saat harga masuk zona BR</li>
+          <li><span class="tf-dot tf-dot-g"></span>Auto Break-Even (geser SL ke entry)</li>
+          <li><span class="tf-dot tf-dot-g"></span>Trailing Stop otomatis setelah profit</li>
+          <li><span class="tf-dot tf-dot-g"></span>One Shoot Mode (SL dan TP)</li>
+          <li><span class="tf-dot tf-dot-g"></span>Recovery Mode untuk kondisi drawdown</li>
+          <li><span class="tf-dot tf-dot-g"></span>Martingale Mode (optional)</li>
+          <li><span class="tf-dot tf-dot-g"></span>Trend Filter (EMA multi timeframe)</li>
+          <li><span class="tf-dot tf-dot-g"></span>Daily profit &amp; loss limit</li>
+          <li><span class="tf-dot tf-dot-g"></span>Batas jumlah trade per hari</li>
+          <li><span class="tf-dot tf-dot-g"></span>Protected per account number</li>
+        </ul>
+        <span class="tool-badge tb-g">Auto-Trading · MT5 · .ex5</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- UNLOCK SECTION -->
+<section class="unlock-section" id="unlock">
+  <div class="wrap">
+    <div class="r" style="text-align:center;max-width:680px;margin-left:auto;margin-right:auto;">
+      <div class="sec-label" style="text-align:center;">Commercial License</div>
+      <h2 class="sec-h2" style="text-align:center;">Akses Penuh Sistem<br><span>dengan Lisensi Komersial</span></h2>
+      <p class="sec-p" style="max-width:560px;margin:0 auto;">Versi gratis hanya memberikan akses pakai. Lisensi komersial membuka source code penuh — Pine Script dan EA MQL5 — yang bisa kamu modifikasi, rebrand, dan jual sebagai produkmu sendiri.</p>
+    </div>
+    <div class="unlock-grid r">
+      <div class="unlock-card uc-pine">
+        <div class="uc-head">
+          <div class="uc-icon uci-blue">📝</div>
+          <div class="uc-head-text"><h3>Pine Script — Source Code</h3><p>TradingView Strategy · Open</p></div>
+        </div>
+        <div class="uc-divider"></div>
+        <ul class="uc-list">
+          <li><div class="uc-check ucc-blue">✓</div><span>File <strong style="color:var(--text)">.pine</strong> lengkap — bisa dibuka, diedit, dimodifikasi langsung di TradingView Pine Editor</span></li>
+          <li><div class="uc-check ucc-blue">✓</div><span>Ganti nama strategy, watermark, dan branding menjadi brand kamu sendiri</span></li>
+          <li><div class="uc-check ucc-blue">✓</div><span>Tambah atau ubah logika — zona, filter, TP ratio, alert — sesuai kebutuhan kamu</span></li>
+          <li><div class="uc-check ucc-blue">✓</div><span>Publish ke TradingView sebagai strategy milikmu, jual akses ke member komunitas</span></li>
+          <li><div class="uc-check ucc-blue">✓</div><span>Kode terstruktur, dikomentari — mudah dipahami meski bukan programmer</span></li>
+        </ul>
+        <div class="uc-bottom">
+          <span class="uc-tag uct-blue">Pine Script v5 · Full Source</span>
+          <span class="uc-note">Tidak dikunci · Edit bebas</span>
+        </div>
+      </div>
+      <div class="unlock-card uc-ea">
+        <div class="uc-head">
+          <div class="uc-icon uci-green">⚙️</div>
+          <div class="uc-head-text"><h3>EA &amp; Indicator — Source Code</h3><p>MQL5 · MetaTrader 5 · Open</p></div>
+        </div>
+        <div class="uc-divider"></div>
+        <ul class="uc-list">
+          <li><div class="uc-check ucc-green">✓</div><span>File <strong style="color:var(--text)">.mq5</strong> penuh untuk EA dan Indicator — compile sendiri, rebrand nama produk</span></li>
+          <li><div class="uc-check ucc-green">✓</div><span>Ganti nama EA, copyright, dan semua teks yang tampil di MetaTrader — full ownership</span></li>
+          <li><div class="uc-check ucc-green">✓</div><span>Modifikasi logika entry, manajemen TP, lot size, filter — bebas sesuai kebutuhan</span></li>
+          <li><div class="uc-check ucc-green">✓</div><span>Buat sistem lisensi sendiri — lock per account number klien yang beli darimu</span></li>
+          <li><div class="uc-check ucc-green">✓</div><span>Distribusikan file <strong style="color:var(--text)">.ex5</strong> hasil compile ke unlimited klien — tanpa batas</span></li>
+        </ul>
+        <div class="uc-bottom">
+          <span class="uc-tag uct-green">MQL5 · Full Source · .mq5</span>
+          <span class="uc-note">Compile sendiri · Rebrand bebas</span>
+        </div>
+      </div>
+    </div>
+    <div class="r" style="margin-top:28px;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--card2);">
+        <div style="padding:18px 24px;border-right:1px solid var(--border);">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:10px;">Akses</div>
+          <div style="font-size:13px;color:var(--muted);">Bisa dipakai</div>
+          <div style="font-size:13px;color:var(--muted);">Source code</div>
+          <div style="font-size:13px;color:var(--muted);">Rebrand &amp; jual</div>
+        </div>
+        <div style="padding:18px 24px;border-right:1px solid var(--border);">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:10px;">Gratis / Member</div>
+          <div style="font-size:13px;color:var(--green);">✔ Ya</div>
+          <div style="font-size:13px;color:var(--red);">✘ Tidak</div>
+          <div style="font-size:13px;color:var(--red);">✘ Tidak</div>
+        </div>
+        <div style="padding:18px 24px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:10px;">Commercial License</div>
+          <div style="font-size:13px;color:var(--green);">✔ Ya</div>
+          <div style="font-size:13px;color:var(--green);">✔ Ya — Pine + MQL5</div>
+          <div style="font-size:13px;color:var(--green);">✔ Ya — unlimited klien</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE CHART VISUAL SECTION — 1 foto, layout sama seperti EA -->
+<section class="chart-section">
+  <div class="wrap">
+
+    <div class="ea-section-header r">
+      <div>
+        <div class="sec-label">TradingView Strategy — Visual</div>
+        <h2 class="sec-h2">Tampilan Indikator<br><span>di TradingView</span></h2>
+        <p class="sec-p" style="max-width:520px;">Zona BR 1 &amp; BR 2 otomatis terbentuk setelah break struktur. Dashboard real-time, sinyal entry, SL/TP lines, dan status Freshness — semuanya langsung di chart.</p>
+      </div>
+      <div class="ea-badges">
+        <span class="ea-badge eb-blue">BR 1 Zone ✔</span>
+        <span class="ea-badge eb-purple">BR 2 Zone ✔</span>
+        <span class="ea-badge eb-green">Auto SL/TP ✔</span>
+        <span class="ea-badge eb-cyan">Dashboard Live ✔</span>
+        <span class="ea-badge eb-amber">Break-Even ✔</span>
+        <span class="ea-badge eb-red">Alert System ✔</span>
+      </div>
+    </div>
+
+    <!-- 1 FOTO + 1 VIDEO SIDE BY SIDE -->
+    <div class="media-grid r">
+
+      <!-- VIDEO -->
+      <div class="ea-photo-card">
+        <div class="ea-photo-wrap media-wrap video-wrap">
+          <video src="images/tv-demo.mp4" controls playsinline poster="images/tv-thumb.png"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          </video>
+          <div class="ea-photo-placeholder video-placeholder">
+            <div class="eap-inner">
+              <div class="eap-icon">▶</div>
+              <div class="eap-label">tv-demo.mp4</div>
+              <div class="eap-hint">Video demo indikator TradingView</div>
+            </div>
+          </div>
+        </div>
+        <div class="ea-photo-caption">
+          <span class="eac-tag eac-video">▶ Video</span>
+          <span class="eac-text">Cara kerja zona dan sinyal di chart </span>
+        </div>
+      </div>
+
+    </div><!-- media-grid -->
+
+    <!-- 4 CALLOUTS -->
+    <div class="chart-callouts r">
+      <div class="callout-item">
+        <div class="coi-icon" style="background:rgba(242,54,69,0.1);border-color:rgba(242,54,69,0.3);">🔴</div>
+        <div><strong>Zona SELL BR 1 &amp; BR 2</strong><p>Otomatis terbentuk setelah Break Low. Harga retrace ke zona → sistem siap SHORT.</p></div>
+      </div>
+      <div class="callout-item">
+        <div class="coi-icon" style="background:rgba(0,207,255,0.1);border-color:rgba(0,207,255,0.3);">📋</div>
+        <div><strong>Dashboard Real-Time</strong><p>Status VALID/INVALID, Freshness FRESH/USED/INVALID, Trend filter — satu tampilan.</p></div>
+      </div>
+      <div class="callout-item">
+        <div class="coi-icon" style="background:rgba(34,197,94,0.1);border-color:rgba(34,197,94,0.3);">🎯</div>
+        <div><strong>TP1 / TP2 / TP3 Otomatis</strong><p>Tiga target profit tergambar di chart. Auto partial close per level tanpa manual.</p></div>
+      </div>
+      <div class="callout-item">
+        <div class="coi-icon" style="background:rgba(245,158,11,0.1);border-color:rgba(245,158,11,0.3);">🔒</div>
+        <div><strong>Auto Break-Even</strong><p>Setelah TP1 hit, SL otomatis geser ke entry. Posisi sisa jadi risk-free.</p></div>
+      </div>
     </div>
 
   </div>
 </section>
 
-<section class="testimoni-section" id="testimoni">
-  <div class="container">
-    <h2>Diskusi Member MATARY?</h2>
-    <p class="subtext">
-      Cuplikan aktivitas dari member komunitas.
-    </p>
+<!-- EA VISUAL SECTION -->
+<section class="ea-section">
+  <div class="wrap">
 
-    <div class="testimoni-scroll">
-      <div class="testimoni-card">
-        <img src="assets/img/testimoni-1.png" alt="Testimoni MATARY 1">
+    <div class="ea-section-header r">
+      <div>
+        <div class="sec-label">Expert Advisor — Visual</div>
+        <h2 class="sec-h2">Tampilan EA<br><span>di MetaTrader 5</span></h2>
+        <p class="sec-p" style="max-width:520px;">Lihat bagaimana EA ZONA A1 bekerja langsung di MetaTrader 5 — dari parameter setting hingga eksekusi trade otomatis di chart.</p>
+      </div>
+      <div class="ea-badges">
+        <span class="ea-badge eb-green">Auto Entry ✔</span>
+        <span class="ea-badge eb-cyan">Break-Even ✔</span>
+        <span class="ea-badge eb-amber">Trailing Stop ✔</span>
+        <span class="ea-badge eb-blue">Recovery Mode ✔</span>
+        <span class="ea-badge eb-purple">Martingale ✔</span>
+        <span class="ea-badge eb-red">Daily Limit ✔</span>
+      </div>
+    </div>
+
+    <!-- 1 FOTO + 1 VIDEO SIDE BY SIDE -->
+    <div class="media-grid r">
+
+      <!-- FOTO -->
+      <div class="ea-photo-card">
+        <div class="ea-photo-wrap media-wrap">
+          <img src="images/ea-chart.png" alt="EA ZONA A1 di MT5 Chart" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ea-photo-placeholder">
+            <div class="eap-inner">
+              <div class="eap-icon">📊</div>
+              <div class="eap-label">ea-chart.png</div>
+              <div class="eap-hint">Screenshot EA running di MT5 chart</div>
+            </div>
+          </div>
+        </div>
+        <div class="ea-photo-caption">
+          <span class="eac-tag eac-photo">📷 Foto</span>
+          <span class="eac-text">EA aktif di chart — zona, entry otomatis, TP/SL berjalan</span>
+        </div>
       </div>
 
-      <div class="testimoni-card">
-        <img src="assets/img/testimoni-2.png" alt="Testimoni MATARY 2">
+      <!-- VIDEO -->
+      <div class="ea-photo-card">
+        <div class="ea-photo-wrap media-wrap video-wrap">
+          <video src="images/ea-demo.mp4" controls playsinline poster="images/ea-thumb.png"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          </video>
+          <div class="ea-photo-placeholder video-placeholder">
+            <div class="eap-inner">
+              <div class="eap-icon">▶</div>
+              <div class="eap-label">ea-demo.mp4</div>
+              <div class="eap-hint">Video demo EA MetaTrader 5</div>
+            </div>
+          </div>
+        </div>
+        <div class="ea-photo-caption">
+          <span class="eac-tag eac-video">▶ Video</span>
+          <span class="eac-text">Demo live — EA buka posisi, kelola TP, Break-Even otomatis</span>
+        </div>
       </div>
 
-      <div class="testimoni-card">
-        <img src="assets/img/testimoni-3.png" alt="Aktivitas Grup MATARY">
-      </div>
+    </div><!-- media-grid -->
 
-      <div class="testimoni-card">
-        <img src="assets/img/testimoni-4.png" alt="Aktivitas Grup MATARY">
+    <!-- FEATURE PILLS -->
+    <div class="ea-features-row r">
+      <div class="ea-feat-item">
+        <div class="eaf-icon" style="color:var(--green);">🤖</div>
+        <div><strong>Auto Entry</strong><p>Buka posisi otomatis saat harga masuk zona BR</p></div>
       </div>
+      <div class="ea-feat-item">
+        <div class="eaf-icon" style="color:var(--amber);">🔒</div>
+        <div><strong>Auto Break-Even</strong><p>SL geser ke entry setelah TP1 kena</p></div>
+      </div>
+      <div class="ea-feat-item">
+        <div class="eaf-icon" style="color:var(--cyan);">📈</div>
+        <div><strong>Trailing Stop</strong><p>Kunci profit saat harga terus bergerak</p></div>
+      </div>
+      <div class="ea-feat-item">
+        <div class="eaf-icon" style="color:var(--blue);">🔄</div>
+        <div><strong>Recovery Mode</strong><p>Kelola drawdown dengan strategi recovery</p></div>
+      </div>
+      <div class="ea-feat-item">
+        <div class="eaf-icon" style="color:var(--purple);">📊</div>
+        <div><strong>Martingale (Optional)</strong><p>Mode martingale dengan kontrol risiko</p></div>
+      </div>
+      <div class="ea-feat-item">
+        <div class="eaf-icon" style="color:var(--red);">🛡️</div>
+        <div><strong>Daily Limit</strong><p>Batas profit &amp; loss harian otomatis</p></div>
+      </div>
+    </div>
 
-      <div class="testimoni-card">
-        <img src="assets/img/testimoni-5.png" alt="Aktivitas Grup MATARY">
-      </div>
+  </div>
+</section>
 
-      <div class="testimoni-card">
-        <img src="assets/img/testimoni-6.png" alt="Aktivitas Grup MATARY">
-      </div>
+<!-- STRATEGY FEATURES -->
+<section class="feat-section" id="features">
+  <div class="wrap">
+    <div class="r">
+      <div class="sec-label">Strategy Features</div>
+      <h2 class="sec-h2">Everything Built<br><span>Into the System</span></h2>
+      <p class="sec-p">Every feature listed below is already coded inside the strategy — no extra tools or add-ons required.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card r"><div class="feat-ic ic-blue">🔲</div><div><h4>BR 1 &amp; BR 2 Zone Detection</h4><p>Detects high-probability rejection zones based on swing structure. BR 1 is the primary zone, BR 2 is the equilibrium fallback. Each zone tracks FRESH / USED / INVALID status in real-time.</p></div></div>
+      <div class="feat-card r"><div class="feat-ic ic-blue">📐</div><div><h4>Swing Structure Detection</h4><p>Automatically detects bullish and bearish Break of Structure (BOS/CHoCH) using a configurable swing length. Draws break lines and labels directly on the chart.</p></div></div>
+      <div class="feat-card r"><div class="feat-ic ic-amber">📡</div><div><h4>Multi-Timeframe Trend Filter</h4><p>Filters entries using a higher-timeframe MA (EMA, SMA, WMA, or HMA up to 200 period). Blocks counter-trend signals automatically. Configurable timeframe — Daily, Weekly, 4H, 1H.</p></div></div>
+      <div class="feat-card r"><div class="feat-ic ic-amber">🔒</div><div><h4>Auto Break-Even After TP1</h4><p>Once TP1 is hit, the SL automatically moves to entry price (with optional buffer %). The remaining position becomes risk-free and rides toward TP2 and TP3.</p></div></div>
+      <div class="feat-card r"><div class="feat-ic ic-blue">🧭</div><div><h4>Trade Direction Control</h4><p>Set the EA/strategy to trade Long Only, Short Only, or Both directions. Useful for adapting to specific market conditions or broker restrictions.</p></div></div>
+      <div class="feat-card r"><div class="feat-ic ic-green">✅</div><div><h4>Live Hit Detection &amp; Alerts</h4><p>Visual markers appear on-chart when TP1, TP2, TP3, or SL is hit. Background flashes in color. Full alert system for TradingView: TP hits, SL hits, BOS/CHoCH signals, zone entries.</p></div></div>
+      <div class="feat-card r"><div class="feat-ic ic-amber">📋</div><div><h4>Live Zone Dashboard</h4><p>On-chart table shows real-time zone status for BR 1 and BR 2 — Trend filter, Swing Bias, Zone validity, Freshness status — for both Long and Short, updated every bar.</p></div></div>
+      <div class="feat-card r"><div class="feat-ic ic-blue">📏</div><div><h4>SL/TP Line Visualizer</h4><p>On every new entry, the system draws labeled SL, TP1, TP2, TP3, and Entry lines extending forward on the chart with configurable bar length.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- HOW TO JOIN -->
-<section class="join-section">
-  <div class="join-container join-steps">
+<!-- WHAT YOU GET -->
+<section>
+  <div class="wrap">
+    <div class="r">
+      <div class="sec-label">What You Get</div>
+      <h2 class="sec-h2">Complete Package,<br><span>Ready to Sell</span></h2>
+      <p class="sec-p">Everything delivered in one package — files, documentation, and the rights to resell.</p>
+    </div>
+    <div class="get-grid">
+      <div class="get-item r"><div class="ck">✓</div><div><h4>TradingView Strategy File (Pine Script v5)</h4><p>Rebrand-ready — change name and branding to match your product.</p></div></div>
+      <div class="get-item r"><div class="ck">✓</div><div><h4>MT5 Indicator File (.ex5)</h4><p>Compiled, plug-and-play. No recompiling needed by you or your clients.</p></div></div>
+      <div class="get-item r"><div class="ck">✓</div><div><h4>Expert Advisor MT5 (.ex5)</h4><p>Full auto-trading EA — entries, partial TPs, Break-Even, all automated.</p></div></div>
+      <div class="get-item r"><div class="ck">✓</div><div><h4>Excel License Manager</h4><p>Per-account password system so you control who accesses your product.</p></div></div>
+      <div class="get-item r"><div class="ck">✓</div><div><h4>Full Rebrand Rights</h4><p>Rename, re-logo, and present this as your own trading system — no credits required.</p></div></div>
+      <div class="get-item r"><div class="ck">✓</div><div><h4>Complete User Guide</h4><p>Installation, settings, troubleshooting, and client distribution steps — all documented.</p></div></div>
+      <div class="get-item r"><div class="ck">✓</div><div><h4>Unlimited Resell Accounts</h4><p>Distribute to as many clients as you want with no per-seat restrictions.</p></div></div>
+      <div class="get-item r"><div class="ck">✓</div><div><h4>Free System Updates</h4><p>All bug fixes and improvements during the license period — delivered at no extra cost.</p></div></div>
+    </div>
+  </div>
+</section>
 
-    <div class="step">
-      <div class="step-number">1</div>
-      <div class="step-content">
-        <h4>Daftar Broker</h4>
-
-        <p>
-          Daftar EXNESS:
-          <a href="https://one.exnessonelink.com/boarding/sign-up/a/d8f5pvzdnm?lng=id"
-             target="_blank"
-             onclick="gtag('event', 'click_register_broker', {
-               event_category: 'Broker',
-               event_label: 'EXNESS'
-             });">
-            Klik di sini
+<!-- PRICING -->
+<section class="price-section" id="buy">
+  <div class="wrap" style="text-align:center;">
+    <div class="r">
+      <div class="sec-label" style="text-align:center;">Commercial License</div>
+      <h2 class="sec-h2" style="text-align:center;">One Price.<br><span>Resell Forever.</span></h2>
+    </div>
+    <div class="price-wrap r">
+      <div class="price-card">
+        <div class="pc-top">
+          <div class="pc-label">Rebrand &amp; Reseller License</div>
+          <div class="pc-name">ZONA A1 — Complete Commercial Package</div>
+          <div class="pc-price"><sup>$</sup>500</div>
+          <div class="pc-freq">One-time payment · No subscription · No recurring fees</div>
+        </div>
+        <div class="pc-bot">
+          <ul class="ck-list">
+            <li><div class="c">✓</div>TradingView Strategy — Pine Script v5, rebrand ready</li>
+            <li><div class="c">✓</div>MT5 Indicator (.ex5)</li>
+            <li><div class="c">✓</div>MT5 Expert Advisor (.ex5)</li>
+            <li><div class="c">✓</div>Auto Break-Even system built-in</li>
+            <li><div class="c">✓</div>Multi-TF trend filter</li>
+            <li><div class="c">✓</div>Full rebrand rights — your name, your logo</li>
+            <li><div class="c">✓</div>Distribute to unlimited client accounts</li>
+            <li><div class="c">✓</div>Complete setup &amp; distribution guide</li>
+            <li><div class="c">✓</div>Free updates during license period</li>
+          </ul>
+          <a href="https://wa.me/6281234567890?text=Hi%2C%20I%27m%20interested%20in%20the%20ZONA%20A1%20%24500%20Commercial%20License." target="_blank" class="pc-cta">
+            Buy Commercial License — $500 →
           </a>
-        </p>
-
-        <p>
-          Daftar Broker Lokal (MIFX):
-          <a href="https://mifx.com/live/r/matary"
-             target="_blank"
-             onclick="gtag('event', 'click_register_broker', {
-               event_category: 'Broker',
-               event_label: 'MIFX'
-             });">
-            Klik di sini
-          </a>
-        </p>
-
-        <small style="color:#94a3b8">
-          ✔️  Pilih broker internasional atau lokal (BAPPEBTI)
-        </small>
-
+        </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="step">
-      <div class="step-number">2</div>
-      <div class="step-content">
-        <h4>Tanpa Minimal Deposit</h4>
-        <p>Deposit berapapun, tidak ada batas minimal.</p>
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="wrap">
+    <div class="r" style="text-align:center;">
+      <div class="sec-label" style="text-align:center;">FAQ</div>
+      <h2 class="sec-h2" style="text-align:center;">Common <span>Questions</span></h2>
+    </div>
+    <div class="faq-inner">
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">What is included in the $500 commercial license?<span class="faq-plus">+</span></button><div class="faq-body"><p>You get the full ZONA A1 system — TradingView Pine Script strategy, MT5 Indicator (.ex5), MT5 Expert Advisor (.ex5), Excel-based license manager, complete user guide, full rebrand rights, unlimited resell rights, free updates, and WhatsApp support.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">Can I rename and rebrand the system as my own product?<span class="faq-plus">+</span></button><div class="faq-body"><p>Yes, fully. You can change the product name, logo, and any branding. The watermark in the current version will be replaced with your brand name. No attribution to us is required.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">How does the per-account license protection work?<span class="faq-plus">+</span></button><div class="faq-body"><p>The MT5 files use an account number + password system managed via an Excel file. You enter your client's MT5 account number and the system generates the unlock password. Only authorized accounts can run the EA and indicator.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">How many clients can I sell to?<span class="faq-plus">+</span></button><div class="faq-body"><p>Unlimited. There is no per-seat restriction. You can distribute to as many client accounts as you want using the Excel license manager included in the package.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">What is the BR 1 and BR 2 zone strategy?<span class="faq-plus">+</span></button><div class="faq-body"><p>The system detects swing structure breaks (BOS/CHoCH), then waits for price to retrace into the BR 1 zone (primary rejection area) or the BR 2 zone (equilibrium area) before entering. Entries are filtered by a multi-timeframe MA trend filter. Each zone tracks FRESH/USED/INVALID status.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">Do I need coding skills to use or resell this?<span class="faq-plus">+</span></button><div class="faq-body"><p>No coding required. All files are pre-compiled and ready to use. The included guide covers everything — installation, settings, and distributing to your clients step by step.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">What payment methods are accepted?<span class="faq-plus">+</span></button><div class="faq-body"><p>We accept local bank transfer (BCA, Mandiri), PayPal, and Wise. Contact us via WhatsApp to confirm the best method for your situation before making a payment.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">How quickly are files delivered?<span class="faq-plus">+</span></button><div class="faq-body"><p>Files are delivered within 24 hours of confirmed payment. In most cases delivery happens the same day, often within a few hours after confirmation.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section class="disclaimer-section">
+  <div class="wrap">
+    <div class="disclaimer-box r">
+      <div class="disc-icon">⚠️</div>
+      <div class="disc-content">
+        <h3 class="disc-title">Disclaimer — Risk Warning</h3>
+        <p>Trading forex, gold, dan instrumen keuangan lainnya melibatkan risiko tinggi dan tidak cocok untuk semua orang. Kinerja masa lalu tidak menjamin hasil di masa depan. ZONA A1 adalah <strong>alat bantu analisis teknikal</strong>, bukan jaminan profit.</p>
+        <ul class="disc-list">
+          <li>Seluruh hasil backtest dan demo bersifat ilustratif — tidak menjamin performa live trading</li>
+          <li>Gunakan manajemen risiko yang sesuai dengan kemampuan finansial Anda</li>
+          <li>Pastikan Anda memahami cara kerja sistem sebelum menggunakannya pada akun live</li>
+          <li>Mataryclub tidak bertanggung jawab atas kerugian yang timbul dari penggunaan sistem ini</li>
+          <li>Lisensi komersial hanya mencakup hak distribusi software — bukan jaminan keuntungan trading</li>
+        </ul>
+        <p class="disc-note">Dengan menggunakan atau mendistribusikan sistem ini, Anda menyatakan telah memahami dan menyetujui ketentuan di atas.</p>
       </div>
     </div>
-
-    <div class="step">
-      <div class="step-number">3</div>
-      <div class="step-content">
-        <h4>Kirim No Akun & SS Balance</h4>
-        <p>No akun: 123456<br>SS Balance: Screenshot</p>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="step-number">4</div>
-      <div class="step-content">
-        <h4>Kirim ke Telegram</h4>
-        <p>Kirim ke <a href="https://t.me/mataryclub" target="_blank">@mataryclub</a></p>
-      </div>
-    </div>
-    
   </div>
 </section>
 
 
-<!-- CTA -->
-<section class="join-cta">
-  <h2>Siap Join Komunitas MATARY?</h2>
-  <p>Belajar, diskusi, dan berkembang bersama trader lainnya.</p>
-  <a href="https://t.me/mataryclub"
-   target="_blank"
-   class="join-btn"
-   onclick="gtag('event', 'click_join_matary', {
-     event_category: 'Join',
-     event_label: 'Join via Telegram'
-   });">
-  Join via Telegram
-</a>
-
+<section class="bottom">
+  <div class="bottom-glow"></div>
+  <h2>Ready to Build Your Community<br>with <span class="g">ZONA A1</span>?</h2>
+  <p>$500 once. Full system. Unlimited clients. All revenue is yours.</p>
+  <div style="display:flex;flex-direction:column;align-items:center;gap:20px;">
+    <div class="contact-strip r">
+      <div class="cc"><span class="cc-l">License</span><span class="cc-v">$500 One-Time</span></div>
+      <div class="cc"><span class="cc-l">WhatsApp</span><span class="cc-v"><a href="https://wa.me/6281234567890">+62 812-XXXX-XXXX</a></span></div>
+      <div class="cc"><span class="cc-l">Email</span><span class="cc-v"><a href="mailto:info@mataryclub.com">info@mataryclub.com</a></span></div>
+      <div class="cc"><span class="cc-l">Delivery</span><span class="cc-v">Within 24 Hours</span></div>
+    </div>
+    <a href="https://wa.me/6281234567890?text=Hi%2C%20I%27m%20interested%20in%20the%20ZONA%20A1%20%24500%20Commercial%20License." target="_blank" class="wa-btn r">💬 &nbsp;Chat on WhatsApp Now</a>
+  </div>
 </section>
 
+<footer>
+  <div class="foot-logo">ZONA <span>A1</span> — MataryClub</div>
+  <div class="foot-note">© 2025 — Commercial License · Prices subject to change without notice</div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

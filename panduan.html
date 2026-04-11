@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panduan ZONA A1 — Mataryclub</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo"><a href="index.html">ZONA <span class="a1">A1</span></a></div>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="panduan.html" class="nav-link active">Panduan</a>
+    <a href="index.html#buy" class="nav-btn">Get License — $500</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="panduan-hero">
+  <div class="panduan-hero-content">
+    <div class="chip" style="margin-bottom:20px;"><span class="chip-dot"></span>Strategy Guide v2</div>
+    <h1>Panduan <span class="g">ZONA A1</span></h1>
+    <p style="color:var(--muted);font-size:15px;margin-top:12px;line-height:1.75;">
+      Panduan lengkap cara membaca dan menggunakan indikator ZONA A1 —
+      dari break struktur hingga entry menggunakan zona BR 1 dan BR 2.
+    </p>
+  </div>
+</div>
+
+<!-- QUICK NAV TABS -->
+<div class="panduan-tabs">
+  <a class="p-tab p-active" href="#p1" onclick="activateTab(this)">01 · Struktur</a>
+  <a class="p-tab" href="#p2" onclick="activateTab(this)">02 · Freshness</a>
+  <a class="p-tab" href="#p3" onclick="activateTab(this)">03 · Dashboard</a>
+  <a class="p-tab" href="#p4" onclick="activateTab(this)">04 · Entry</a>
+  <a class="p-tab" href="#p5" onclick="activateTab(this)">05 · Kondisi Khusus</a>
+  <a class="p-tab" href="#p6" onclick="activateTab(this)">06 · Dilarang</a>
+  <a class="p-tab" href="#p7" onclick="activateTab(this)">07 · Flow Final</a>
+</div>
+
+<div class="panduan-body">
+
+  <!-- ── 01 STRUKTUR ── -->
+  <div class="p-section" id="p1">
+    <div class="p-section-header">
+      <span class="p-sec-num">01</span>
+      <span class="p-sec-title">Struktur Dasar Market</span>
+    </div>
+    <div class="p-section-body">
+      <div class="rule-bar rb-g" style="margin-bottom:16px;">
+        WAJIB: Hanya entry setelah ada BREAK — tanpa break = no trade
+      </div>
+      <div class="p-two">
+        <div class="sig-card buy">
+          <div class="sig-title"><span class="sig-dot sdot-g"></span>🟢 BUY</div>
+          <ul class="sig-list">
+            <li><span class="arr-g">→</span> Terjadi Break High</li>
+            <li><span class="arr-g">→</span> Market berubah bullish</li>
+            <li><span class="arr-g">→</span> Status: <code>waiting LONG</code></li>
+          </ul>
+        </div>
+        <div class="sig-card sell">
+          <div class="sig-title"><span class="sig-dot sdot-r"></span>🔴 SELL</div>
+          <ul class="sig-list">
+            <li><span class="arr-r">→</span> Terjadi Break Low</li>
+            <li><span class="arr-r">→</span> Market berubah bearish</li>
+            <li><span class="arr-r">→</span> Status: <code>waiting SHORT</code></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── 03 FRESHNESS ── -->
+  <div class="p-section" id="p3">
+    <div class="p-section-header">
+      <span class="p-sec-num">02</span>
+      <span class="p-sec-title">Status Freshness Zona</span>
+    </div>
+    <div class="p-section-body">
+      <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">
+        Setiap zona memiliki 3 kondisi status yang tampil di baris
+        <strong style="color:var(--text)">Freshness BR 1</strong> dan
+        <strong style="color:var(--text)">Freshness BR 2</strong> di dashboard:
+      </p>
+      <table class="f-table">
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>Kondisi</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="badge bf">🟢 FRESH</span></td>
+            <td>Zona baru terbentuk setelah break, harga belum pernah menyentuh zona</td>
+            <td style="color:var(--green);">✔ Boleh entry saat harga masuk</td>
+          </tr>
+          <tr>
+            <td><span class="badge bu">🟡 USED</span></td>
+            <td>Harga sudah masuk zona, entry sudah terjadi</td>
+            <td style="color:var(--yellow);">⚠ Jangan entry ulang</td>
+          </tr>
+          <tr>
+            <td><span class="badge bi">🔴 INVALID</span></td>
+            <td>Struktur berubah — bias berbalik arah</td>
+            <td style="color:var(--red);">✘ No trade, tunggu break baru</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="spacer"></div>
+      <div class="rule-bar rb-g">
+        ATURAN: Hanya entry di zona dengan status FRESH. USED dan INVALID = skip.
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 04 DASHBOARD ── -->
+  <div class="p-section" id="p4">
+    <div class="p-section-header">
+      <span class="p-sec-num">03</span>
+      <span class="p-sec-title">Status Zona di Dashboard</span>
+    </div>
+    <div class="p-section-body">
+      <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">
+        Dashboard menampilkan semua kondisi secara real-time. Semua syarat harus terpenuhi sebelum entry:
+      </p>
+      <div class="p-two">
+        <div class="vi-card valid">
+          <div class="vi-title" style="color:var(--green);">✅ ZONA VALID — Boleh Entry</div>
+          <ul class="vi-list">
+            <li><span class="ok-ic">✔</span> Sudah ada BREAK</li>
+            <li><span class="ok-ic">✔</span> Masih dalam kondisi waiting</li>
+            <li><span class="ok-ic">✔</span> Freshness = <span class="badge bf" style="font-size:10px;">🟢 FRESH</span></li>
+            <li><span class="ok-ic">✔</span> Zona tidak ditembus</li>
+            <li><span class="ok-ic">✔</span> Swing terbaru</li>
+            <li><span class="ok-ic">✔</span> Trend mendukung</li>
+            <li><span class="ok-ic">✔</span> Dashboard: <code style="color:var(--green)">VALID ✔</code></li>
+          </ul>
+        </div>
+        <div class="vi-card invalid">
+          <div class="vi-title" style="color:var(--red);">❌ ZONA INVALID — Dilarang</div>
+          <ul class="vi-list">
+            <li><span class="no-ic">✘</span> Belum ada BREAK</li>
+            <li><span class="no-ic">✘</span> Freshness = <span class="badge bu" style="font-size:10px;">🟡 USED</span> atau <span class="badge bi" style="font-size:10px;">🔴 INVALID</span></li>
+            <li><span class="no-ic">✘</span> Zona sudah ditembus</li>
+            <li><span class="no-ic">✘</span> Trend berlawanan</li>
+            <li><span class="no-ic">✘</span> Zona lama</li>
+            <li><span class="no-ic">✘</span> Sudah pernah entry</li>
+            <li><span class="no-ic">✘</span> Dashboard: <code style="color:var(--red)">INVALID ✘</code></li>
+          </ul>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="alert-danger">
+        <span class="alert-icon">🚨</span>
+        <span><strong style="color:var(--text)">JIKA INVALID = NO ENTRY.</strong>
+        Tunggu break baru, reset struktur, bentuk zona baru.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 05 ENTRY ── -->
+  <div class="p-section" id="p5">
+    <div class="p-section-header">
+      <span class="p-sec-num">04</span>
+      <span class="p-sec-title">Rule Entry</span>
+    </div>
+    <div class="p-section-body">
+      <div class="p-two">
+        <div class="sig-card buy">
+          <div class="sig-title"><span class="sig-dot sdot-g"></span>🟢 BUY Entry</div>
+          <div class="flow">
+            <div class="flow-step"><div class="fn g">1</div><div class="ft"><strong>BREAK UP</strong> terjadi ✅</div></div>
+            <div class="flow-step"><div class="fn g">2</div><div class="ft">Zona <strong>VALID</strong> ✅</div></div>
+            <div class="flow-step"><div class="fn g">3</div><div class="ft">Freshness = <span class="badge bf" style="font-size:10px;">🟢 FRESH</span></div></div>
+            <div class="flow-step"><div class="fn g">4</div><div class="ft">Harga masuk <strong>BR 1</strong> atau <strong>BR 2</strong></div></div>
+            <div class="flow-step"><div class="fn g">5</div><div class="ft"><strong>Entry BUY ✅</strong></div></div>
+          </div>
+        </div>
+        <div class="sig-card sell">
+          <div class="sig-title"><span class="sig-dot sdot-r"></span>🔴 SELL Entry</div>
+          <div class="flow">
+            <div class="flow-step"><div class="fn r">1</div><div class="ft"><strong>BREAK DOWN</strong> terjadi ✅</div></div>
+            <div class="flow-step"><div class="fn r">2</div><div class="ft">Zona <strong>VALID</strong> ✅</div></div>
+            <div class="flow-step"><div class="fn r">3</div><div class="ft">Freshness = <span class="badge bf" style="font-size:10px;">🟢 FRESH</span></div></div>
+            <div class="flow-step"><div class="fn r">4</div><div class="ft">Harga masuk <strong>BR 1</strong> atau <strong>BR 2</strong></div></div>
+            <div class="flow-step"><div class="fn r">5</div><div class="ft"><strong>Entry SELL ✅</strong></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 06 KONDISI KHUSUS ── -->
+  <div class="p-section" id="p6">
+    <div class="p-section-header">
+      <span class="p-sec-num">05</span>
+      <span class="p-sec-title">Kondisi Khusus & Filter Tambahan</span>
+    </div>
+    <div class="p-section-body">
+      <div class="alert-warn">
+        <span class="alert-icon">⚠️</span>
+        <div>
+          <strong style="color:var(--text)">Range Besar (&gt; 300 pips)</strong><br>
+          <span>Jangan langsung entry di zona. Turun ke M1, tunggu micro break, baru entry saat retest.</span>
+        </div>
+      </div>
+      <div class="spacer-lg"></div>
+      <div class="vi-card info">
+        <div class="vi-title" style="color:var(--blue);">⚡ Filter Tambahan (Opsional tapi Powerful)</div>
+        <ul class="vi-list">
+          <li><span class="ok-ic">→</span> Ada sweep liquidity dulu sebelum masuk zona</li>
+          <li><span class="ok-ic">→</span> Ada rejection kecil di M1/M5 sebelum entry</li>
+          <li><span class="ok-ic">→</span> Entry di awal zona, bukan di tengah atau ujung</li>
+        </ul>
+      </div>
+      <div class="spacer"></div>
+      <div class="alert-info">
+        <span class="alert-icon">📐</span>
+        <span>Jika zona BR 1 dan BR 2 berdekatan di M1–M15, ambil TF yang paling dekat dengan harga saat ini.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 07 DILARANG ── -->
+  <div class="p-section" id="p7">
+    <div class="p-section-header">
+      <span class="p-sec-num">06</span>
+      <span class="p-sec-title">Kondisi Dilarang Entry</span>
+    </div>
+    <div class="p-section-body">
+      <div class="vi-card invalid">
+        <ul class="vi-list">
+          <li><span class="no-ic">✘</span> Harga di tengah range, bukan di zona</li>
+          <li><span class="no-ic">✘</span> Freshness = <span class="badge bu" style="font-size:10px;">🟡 USED</span> atau <span class="badge bi" style="font-size:10px;">🔴 INVALID</span></li>
+          <li><span class="no-ic">✘</span> Zona sudah disentuh berulang kali</li>
+          <li><span class="no-ic">✘</span> Tidak ada break struktur</li>
+          <li><span class="no-ic">✘</span> Dashboard menunjukkan INVALID ✘</li>
+          <li><span class="no-ic">✘</span> Market terlalu choppy tanpa arah</li>
+          <li><span class="no-ic">✘</span> Trend berlawanan dengan arah entry</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── 09 FLOW FINAL ── -->
+  <div class="p-section" id="p9">
+    <div class="p-section-header">
+      <span class="p-sec-num">07</span>
+      <span class="p-sec-title">Flow Final Step by Step</span>
+    </div>
+    <div class="p-section-body">
+      <div class="p-two">
+        <div class="sig-card buy">
+          <div class="sig-title"><span class="sig-dot sdot-g"></span>🔄 BUY FLOW</div>
+          <div class="flow">
+            <div class="flow-step"><div class="fn g">1</div><div class="ft">Break High terjadi</div></div>
+            <div class="flow-step"><div class="fn g">2</div><div class="ft">Sistem bentuk zona <strong>BR 1</strong> &amp; <strong>BR 2</strong></div></div>
+            <div class="flow-step"><div class="fn g">3</div><div class="ft">Cek dashboard: <strong>VALID?</strong></div></div>
+            <div class="flow-step"><div class="fn g">4</div><div class="ft">Cek Freshness: <span class="badge bf" style="font-size:10px;">🟢 FRESH</span> ?</div></div>
+            <div class="flow-step"><div class="fn g">5</div><div class="ft">Harga retrace ke <strong>BR 1</strong> atau <strong>BR 2</strong></div></div>
+            <div class="flow-step"><div class="fn g">6</div><div class="ft"><strong>Entry BUY ✅</strong></div></div>
+          </div>
+        </div>
+        <div class="sig-card sell">
+          <div class="sig-title"><span class="sig-dot sdot-r"></span>🔄 SELL FLOW</div>
+          <div class="flow">
+            <div class="flow-step"><div class="fn r">1</div><div class="ft">Break Low terjadi</div></div>
+            <div class="flow-step"><div class="fn r">2</div><div class="ft">Sistem bentuk zona <strong>BR 1</strong> &amp; <strong>BR 2</strong></div></div>
+            <div class="flow-step"><div class="fn r">3</div><div class="ft">Cek dashboard: <strong>VALID?</strong></div></div>
+            <div class="flow-step"><div class="fn r">4</div><div class="ft">Cek Freshness: <span class="badge bf" style="font-size:10px;">🟢 FRESH</span> ?</div></div>
+            <div class="flow-step"><div class="fn r">5</div><div class="ft">Harga retrace ke <strong>BR 1</strong> atau <strong>BR 2</strong></div></div>
+            <div class="flow-step"><div class="fn r">6</div><div class="ft"><strong>Entry SELL ✅</strong></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK BUTTON -->
+  <div style="text-align:center;padding-top:16px;">
+    <a href="index.html" class="btn-main" style="font-size:14px;padding:13px 32px;">← Kembali ke Home</a>
+  </div>
+
+</div><!-- end panduan-body -->
+
+<footer>
+  <div class="foot-logo">ZONA <span>A1</span> — MataryClub</div>
+  <div class="foot-note">Panduan v2 · Strategy Guide</div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+function activateTab(el) {
+  document.querySelectorAll('.p-tab').forEach(t => t.classList.remove('p-active'));
+  el.classList.add('p-active');
+}
+</script>
+</body>
+</html>
